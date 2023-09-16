@@ -1,0 +1,232 @@
+1.) Are the HTML tags and elements the same thing?
+=> No, HTML tags and elements are not the same thing, although they are closely related.
+HTML tag: HTML tag is used to mark start or end of an element
+HTML Element : HTML Element is Collection of Start tag, its attribute ,an end tag and everthing in between
+
+Opening tag Content closing tag
+| | |
+<p>This is a Paragraph</p>
+|_______________________|
+|
+Element
+
+2.) What are tags and attributes in HTML?
+=> HTML tag: HTML tag is used to mark start or end of an element
+ex., <p> </p>,<a> </a>, <h1> </h1>, <h2> </h2>,<h3> </h3>,<h4> </h4>
+
+HTML Attribute : All html element are attribute.attribute provide additiona infromation about element.attribute usually
+come in name:value pair
+ex., class , id, href, src, weight, height, alt
+
+3.) What are void elements in HTML? With Example.
+=> Void element is self Closing element or empty element. void element do not have closing tags. void element are
+written by single tag usually have attribute but no content between opening - closing tag.
+ex., <img>: <img src="image.jpg" alt="Description of the image">
+<br> : <p>This is some text.<br>This is text on a new line.</p>
+<input>: <input type="text" name="username" placeholder="Enter your username">
+<hr> ,
+<link> ,
+<meta> , <area>,
+<col>
+
+4.) What are HTML Entities? With Example.
+=> HTML entities are special codes used in web pages to display characters and symbols that may be difficult to
+represent directly in HTML. These codes start with an ampersand (&) and end with a semicolon (;), and they help ensure
+that text and symbols appear correctly in web browsers.
+ex., '&lt;'= , &amp; = & , '&gt;'= >, &copy; © or [unicode U+OOA9;] or &#xA9;
+
+5.) What are different types of lists in HTML? With Example.
+=> 1. oredred List: <ol>-tage define ordered List.
+    <li>- each line item start this tag
+        type: 1, A , a, I, i
+        ex., <ol type="1">
+            <li>CEO</li>
+            <li>Manager</li>
+            <li>Supervisors</li>
+            <li>Workers</li>
+        </ol>
+    2. unordered List: <ul>-tage define unordered List.
+            type: disc, circle, square, none
+            ex., <ul type="disc">
+                <li>Nested item 3.1</li>
+                <li>Nested item 3.1</li>
+                <li>Nested item 3.1</li>
+            </ul>
+    3. Nested List: list inside List
+            ex., <ul>
+                <li>Coffee</li>
+                <li>Tea
+                    <ul>
+                        <li>Black tea</li>
+                        <li>Green tea</li>
+                    </ul>
+                </li>
+                <li>Milk</li>
+            </ul>
+    4. Description List: <dl>- description list,
+                <dt>- term (name) description list,
+                <dd> tag describes each term description list
+                    ex., <dl>
+                        <dt>Coffee</dt>
+                        <dd>- black hot drink</dd>
+                        <dt>Milk</dt>
+                        <dd>- white cold drink</dd>
+                    </dl>
+
+6.) What is the ‘class’ attribute in HTML? With Example.
+=> class attribute specifie one or more class names in html element.
+   class name can be used by CSS style and taget specifie elements using javascript
+   ex., <!DOCTYPE html>
+   <html>
+   <head>
+       <style>
+           .country {
+               background-color: black;
+               color: white;
+               padding: 8px;
+           }
+       </style>
+   </head>
+   <body>
+       <h2 class="country">CHINA</h2>
+       <p>China has the largest population in the world.</p>
+       <h2 class="country">INDIA</h2>
+       <p>India has the second largest population in the world.</p>
+       <h2 class="country">UNITED STATES</h2>
+       <p>United States has the third largest population in the world.</p>
+   </body>
+   </html>
+
+7.) What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML
+elements? With Example
+=> ID Attribute: ID attribute must be unique within entire HTML document.
+  ex., <div id="uniqueDiv">
+    This is a unique div element.
+      </div>
+
+    Class Attribute: Class Attribute used to specify one or more class name HTML element. class name used by css and javascript.
+    ex., <p class="important">
+        This is an important paragraph.
+    </p>
+    
+    <p class="country">
+        Another important paragraph.
+    </p>
+
+8.) What are the various formatting tags in HTML?
+=> HTMl tag use various tags to formatand structure web content.
+   1. <h1>,<h2>,<h3>,<h4>,<h5>,<h6> : highest to lower
+   2. <sub> : lowing text below the baseline
+   3. <sup> : rasing text above the baseline
+   4. <p> : paragraph 
+   5. <br> : breck line
+   6. <hr> : horizontal line
+   7. <strong> , <b>: bold font
+   8. <em>,  <i>: italic font 
+   9. <u> : underline text
+   10. <small> , <big> : small big
+   11. <ins>: underline a text marking , <del> : strike line to the text.
+   12. <mark> : higlight text 
+
+9.)How is Cell Padding different from Cell Spacing? With Example
+=> cell padding : space between the content table cell and cell border
+   ex., <table border="1">
+    <tr>
+      <td cellpadding="10">Cell 1</td>
+      <td cellpadding="10">Cell 2</td>
+    </tr>
+  </table>
+
+  cell Spacing : the space between adjacent cells.
+  ex., <table border="1" cellspacing="10">
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+  </table>
+
+10.) How can we club two or more rows or columns into a single row or column in an HTML
+table? With Example.
+=> you can use the rowspan and colspan attribute to merge two or more rows or colums into a single  row or column
+ex., 
+<table border="1">
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Row 1, Col 1</td>
+        <td>Row 1, Col 2</td>
+        <td>Row 1, Col 3</td>
+    </tr>
+    <tr>
+        <td>Row 2, Col 2</td>
+        <td>Row 2, Col 3</td>
+    </tr>
+    <tr>
+        <td colspan="3">Row 3, Col 1-3</td>
+    </tr>
+</table>
+
+11.)What is the difference between a block-level element and an inline element?
+=> block-level Element : block element always start new line and take up full width 
+ex., <div>, <p>, <h1> to <h6>, <ul>, <ol>, <li>, <table>, <form>, <address>, <article>, <aside>, <blockquote>, <video>, <section>.
+    Inline Element: Inline element does not start new line
+ex., <span>, <a>, <strong>, <em>, <img>, <br>, <abbr>, <label>, <object>, <map>, <sub>, <sup>, <textarea>. 
+
+12.)How to create a Hyperlink in HTML? With Example.
+=> <a> tage define hyperlink. "href" attribute indicate link detination.link text part visible to to reder.
+    ex.,  <a href="https://www.example.com">Visit Example.com</a>
+
+13.)What is the use of an iframe tag? With Example.
+=> iframe(inline Frame) tag in html is used to embed to html document or web page within cureent document.
+ex., <!DOCTYPE html>
+<html>
+<head>
+    <title>Embedded Web Page</title>
+</head>
+<body>
+    <h1>Embedding a Web Page Using &lt;iframe&gt;</h1>
+
+    <p>Here is an embedded Google Map:</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387411.29619614905!2d-74.25987595251093!3d40.69767020675087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1ed7c7e9d7%3A0x8c4a3c5087774405!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1623856870403!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <p>Here is an embedded YouTube video:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
+
+14.)What is the use of a span tag? Explain with example?
+=>span tag used to mark up a part of text, or part of the document
+ex., <p>topstechnology is a
+    <span style="color:red;font-weight:bolder">
+        computer science</span> portal for
+    <span style="background-color: lightgreen;">tops</span>.
+</p>
+
+15.)How to insert a picture into a background image of a web page? With Example.
+=> HTMl style attribute and CSS background-image property:
+<p style="background-image: url(1.jpg);"></p>
+
+16.)How are active links different from normal links?
+=> active Links : user is actively interacting with a link,such as click on it.
+   norma links : unvisited Link, user has not clicked on yet.
+
+17.) What are the different tags to separate sections of text?
+=> you can use various tag to separate and define section of text and content.
+ex., <p> , <blockquote>, <h1> to <h6>, <div>, <section>, <article>, <header>,<footer>, <nav>, <aside>, <hr>
+
+18.)What is SVG?
+=> SVG means Scalable Vector Graphics. SVG image and behaviour are define XML text files.
+ use: icon, logo, mobile apps, infographics , data visualization, diagramsanimation, multimedia presentation.
+
+19.)What is difference between HTML and XHTML?
+=> HTML : Hypertext Markup Language .The format is document file formate. It is not necessaryto close the tag in the order they are open. filename extension must be use .html, .htm
+   XHTML : Extensible Hypertext Markup Language. The formate is markeup language. It is necessart to close the tag in the order they are open. filename extension must be use .xhtml, .xht, .xml 
+
+20.) What are logical and physical tags in HTML?
+=>  Logical Tag : HTMl to display the text according to the logical style. 
+    ex.,  <header>, <nav>, <article>, <section>, <footer>, <p>, <h1>, <ul>, <li>, and <a>.
+    Physical Tag : HTML to actual physical formatting to the text.
+    ex.,  <div>, <span>, <font>, <b>, <i>, <u>, and <br>.
