@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-main {
+            display: flex;
+            float: left;
+            width: 100%;
+            height: 60px;
+            justify-content: space-between;
+        }
+
+        .header {
+            background-color: #ffffff;
+        }
+
+        .header ul {
+            display: flex;
+            float: left;
+            width: 400px;
+            height: 100%;
+            list-style: none;
+            justify-content: space-between;
+            padding-left: 25px;
+            align-items: center;
+        }
+
+        .header ul li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .header ul li a {
+            color: black;
+            list-style: none;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        .header ul li:hover {
+            background-color: rgb(25, 152, 69);
+        }
+
+        .language-header ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(10, 9, 11, 0.871);
+            width: 100%;
+            height: 30px;
+        }
+
+        .language-header ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .language-header ul li i {
+            background-attachment: fixed;
+        }
+
+        .serachbar {
+            display: flex;
+            padding-left: 20px;
+            border: 1px solid;
+            border-radius: 43px;
+            align-items: center;
+            height: 35px;
+            width: 190px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        input {
+            border: none;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 319px;
+            margin-right: 75px;
+        }
+
+        .sl-div {
+            border: hidden;
+            display: flex;
+            width: 160px;
+            border-radius: 19px;
+            background-color: rgb(140, 204, 157);
+            margin-right: 10px;
+        }
+
+        .signup-div {
+            display: flex;
+            border: 1px solid rgb(48, 160, 78);
+            background-color: rgb(48, 160, 78);
+            height: 35px;
+            width: 78px;
+            align-items: center;
+            border-radius: 19px;
+            padding-left: 10px;
+            z-index: 1;
+        }
+
+        .login-div {
+            display: flex;
+            background-color: rgb(140, 204, 157);
+            height: 35px;
+            width: 66px;
+            align-items: center;
+            border-top-right-radius: 19px;
+            border-bottom-right-radius: 19px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-main">
+        <div class="header-left">
+            <img src="./image/Untitled.png" alt="W3 schools logo" height="60px" width="60" />
+            <div class="header">
+                <ul class="navbar">
+                    <li>
+                        <a href="">Tutorials
+                            <i class="fa-solid fa-caret-down" style="color: #1c1c1c" width="5px"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">Exercise
+                            <i class="fa-solid fa-caret-down" style="color: #1c1c1c" width="5px"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">Get certified
+                            <i class="fa-solid fa-caret-down" style="color: #1c1c1c" width="5px"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">Services
+                            <i class="fa-solid fa-caret-down" style="color: #1c1c1c" width="5px"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="serachbar">
+                <input type="text" placeholder="Search.....">
+                <i class="fa-solid fa-magnifying-glass" style="color: #000000; padding-right: 15px;"></i>
+            </div>
+            <i class="fa-solid fa-circle-half-stroke" style="color: #000000; align-self: center;
+        margin: 25px; "></i>
+        </div>
+        <div class="header-right">
+            <div class="spaces" style="display: flex; margin-right: 25px;">
+                <i class="fa-solid fa-code" style="color: #0000ff; width: 25px;"></i>
+                <h4>Spaces</h4>
+            </div>
+            <div class="certficate" style="display: flex; margin-right: 25px;">
+                <i class="fa-solid fa-cart-shopping" style="color: #0000ff;"></i>
+                <h4>Certficates</h4>
+            </div>
+            <div class="sl-div">
+                <div class="signup-div" style="display: flex;
+                border: 1px solid rgb(48, 160, 78);
+                background-color: rgb(48, 160, 78);
+                height: 35px;
+                width: 90px;
+                align-items: center;
+                border-radius: 19px;
+                padding-left: 10px; 
+                z-index: 1;">
+                    <a href="" style="text-decoration: none;">Sign Up</a>
+                </div>
+                <div class="login-div">
+                    <a href="" style="text-decoration: none;">Log in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="language-header">
+        <ul>
+            <li><a href="">HTML</a></li>
+            <li><a href="">CSS</a></li>
+            <li><a href="">JAVASCRIPT</a></li>
+            <li><a href="">SQL</a></li>
+            <li><a href="">PYTHON</a></li>
+            <li><a href="">JAVA</a></li>
+            <li><a href="">PHP</a></li>
+            <li><a href="">C</a></li>
+            <li><a href="">C++</a></li>
+            <li><a href="">C#</a></li>
+            <li><a href="">BOOTSTRAP</a></li>
+            <li><a href="">REACT</a></li>
+            <li><a href="">MYSQL</a></li>
+            <li><a href="">JQUARY</a></li>
+            <li><a href="">NODEJS</a></li>
+            <li><a href="">EXCEL</a></li>
+            <li><a href="">ANGULAR</a></li>
+            <li><i class="fa-solid fa-greater-than" style="color: #ffffff"></i></li>
+        </ul>
+    </div>
+</body>
+
+</html>

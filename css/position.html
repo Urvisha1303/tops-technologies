@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+              border: 2px solid;
+            list-style: none;
+            
+        }
+       ul  li{
+          /* border: 2px solid; */
+           display: inline;
+           /* display: block; */
+           /* display: inline-block; */
+
+        }
+        a{
+            /* border: 2px solid; */
+            text-decoration: none;
+        }
+
+        .Urvisha{
+            position: relative;
+        }
+        .Vishal{
+            position: absolute;
+            top: 20px;
+            left:0px;
+
+           
+        }
+        
+
+          .Vishal ul{
+            border: none;
+            display: none;
+
+        }
+          .Vishal  li{
+            border: 2px solid;
+
+        }
+        .Vishal ul li a{
+            border: none;
+        }
+              .Urvisha:hover{
+                background-color: red;
+        }
+         .Urvisha:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">Home</a></li>
+         <li><a href="">Home</a></li>
+          <li><a href="">Home</a></li>
+           <li><a href="">Home</a></li>
+            <li class="Urvisha"><a href="">Urvisha</a>
+                <div class="Vishal">
+                 <ul >
+                <li><a href="">Parth</a></li>
+                <li><a href="">Parth</a></li>
+                <li><a href="">Parth</a></li>
+               </ul>
+                </div>
+               
+            </li>
+    </ul>
+</body>
+</html>
