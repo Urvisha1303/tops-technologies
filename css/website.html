@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      }
+
+      .main_header {
+        background-image: url(./image/banner5.jpg);
+        background-repeat: no-repeat;
+        height: 798px;
+      }
+
+      .main {
+        padding-left: 14%;
+        padding-right: 14%;
+      }
+
+      .contract_number {
+        text-align: end;
+        padding-top: 18px;
+        font-size: 17px;
+        color: white;
+      }
+
+      .logo {
+        display: flex;
+        padding-top: 25px;
+        font-size: 13px;
+        align-items: center;
+        margin-left: 47px;
+      }
+
+      .logo span {
+        font-size: 25px;
+        color: white;
+        padding-left: 10px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 32px;
+      }
+
+      .menu {
+        display: flex;
+        align-items: end;
+      }
+
+      .menu ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding-left: 24px;
+      }
+
+      .text {
+        display: flex;
+        width: 100%;
+        /* border: 1px solid; */
+        height: 380px;
+      }
+
+      .text_left {
+        width: 50%;
+      }
+
+      .text_left h3 {
+        font-size: 72px;
+        color: white;
+        margin-top: 100px;
+        margin-left: 37px;
+      }
+
+      .text_left_from {
+        display: flex;
+        align-items: baseline;
+        color: white;
+        font-size: 29px;
+      }
+
+      .text_left_from i {
+        color: #ffffff;
+        padding-left: 181px;
+        font-size: 68px;
+        margin-top: 2px;
+      }
+
+      .text_left_from h1 {
+        padding-left: 13px;
+        font-size: 29px;
+      }
+
+      .text_left_dollar {
+        color: white;
+        font-size: 11px;
+        padding-left: 233px;
+        padding-top: 18px;
+        display: flex;
+        align-items: baseline;
+      }
+
+      .text_left .text_left_dollar h1 {
+        padding-left: 9px;
+        font-size: 31px;
+        letter-spacing: 2px;
+      }
+
+      .text_right {
+        width: 50%;
+        padding-left: 100px;
+        padding-top: 112px;
+      }
+
+      .text_search {
+        background-color: rgba(1, 17, 68, 0.17);
+        padding-top: 29px;
+        width: 100%;
+        height: 198px;
+        text-align: center;
+      }
+
+      .text_search ul {
+        list-style: none;
+        font-size: 25px;
+      }
+
+      .text_search ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .input_right {
+        margin-top: 14px;
+        width: 100%;
+      }
+
+      .input_right input {
+        width: 40%;
+        height: 45px;
+        font-size: 13px;
+        padding-left: 9px;
+      }
+
+      .button_right {
+        margin-top: 21px;
+      }
+
+      .button_right button {
+        height: 45px;
+        width: 86%;
+        font-size: 15px;
+        background-color: #f4b200;
+        border: none;
+        color: white;
+      }
+
+      .slide {
+        padding-left: 31px;
+      }
+
+      .slide input {
+        background-color: rgba(255, 255, 255, 0.6);
+        border: none;
+        width: 20px;
+        height: 10px;
+      }
+
+      .slide input:hover {
+        background-color: #f4b200;
+        cursor: pointer;
+      }
+
+      .some_content {
+        width: 100%;
+        height: 550px;
+        background-color: #f4b200;
+      }
+
+      .some_content_header {
+        padding-left: 14%;
+        padding-right: 14%;
+        display: flex;
+      }
+
+      .some_content_left {
+        height: 500px;
+        width: 50%;
+        padding-top: 20px;
+      }
+
+      .some_content_left h4 {
+        color: white;
+        font-size: 31px;
+        padding-top: 80px;
+      }
+
+      .some_content_left p {
+        color: white;
+        font-size: 19px;
+        padding-top: 50px;
+      }
+
+      .some_content_left button {
+        background: #011144;
+        color: white;
+        width: 161px;
+        height: 58px;
+        font-size: 18px;
+        border-radius: 9px;
+        margin-top: 41px;
+        box-shadow: 2px 2px 1px rgba(35, 35, 35, 0.15);
+      }
+
+      .some_content_right {
+        width: 50%;
+      }
+
+      .some_content_right img {
+        height: 327px;
+        margin-top: 120px;
+        width: 96%;
+        padding-left: 21px;
+      }
+
+      .services_main {
+        width: 100%;
+        height: 1000px;
+      }
+
+      .services_heading {
+        padding-left: 14%;
+        padding-right: 14%;
+      }
+
+      .service_name {
+        display: flex;
+        justify-content: center;
+      }
+
+      .service_name h4 {
+        padding-top: 100px;
+        text-transform: uppercase;
+        font-size: 48px;
+        color: #323648;
+      }
+
+      .services {
+        width: 100%;
+        height: 230px;
+        /* border: 1px solid; */
+        display: flex;
+        margin-top: 40px;
+        justify-content: space-between;
+      }
+
+      .services_icon {
+        width: 32%;
+        height: 230px;
+        /* border: 1px solid; */
+      }
+
+      .services_icon h6 {
+        font-size: 35px;
+        text-align: center;
+      }
+
+      .services_icon h6 i {
+        color: #f4b200;
+      }
+
+      .services_icon h1 {
+        text-align: center;
+        font-size: 25px;
+        color: #4c4444;
+      }
+
+      .services_icon p {
+        text-align: center;
+        font-size: 19px;
+        padding-top: 25px;
+        color: gray;
+      }
+
+      .tour {
+        height: 450px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tour_left {
+        width: 49%;
+      }
+
+      .tour_left_s1 {
+        background-image: url(./image/s1.jpg);
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        display: flex;
+        position: relative;
+      }
+
+      .tour_left_s1 h4 {
+        width: 100%;
+        font-size: 23px;
+        /* padding-top: 369px;
+                    text-align: center; */
+        bottom: 60px;
+        left: 119px;
+        color: white;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        position: absolute;
+        /* background-color: rgba(0, 0, 0, 0.3); */
+      }
+
+      .tour_right {
+        display: flex;
+        width: 49%;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      .tour_right_img1 {
+        width: 100%;
+        height: 48%;
+      }
+
+      .tour_right_s2 {
+        background-image: url(./image/s2.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+      }
+
+      .tour_right_s2 h4 {
+        font-size: 23px;
+        padding-top: 156px;
+        color: white;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .tour_right_img2 {
+        display: flex;
+        width: 100%;
+        height: 48%;
+        justify-content: space-between;
+      }
+
+      .tour_right_europe {
+        display: flex;
+        width: 48%;
+      }
+
+      .tour-right_s3 {
+        display: flex;
+        background-image: url(./image/s3.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .tour-right_s3 h4 {
+        font-size: 23px;
+        color: white;
+        padding-top: 168px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      .tour_right_canada {
+        display: flex;
+        width: 48%;
+      }
+
+      .tour_right_s4 {
+        display: flex;
+        background-image: url(./image/s4.jpg);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .tour_right_s4 h4 {
+        font-size: 23px;
+        color: white;
+        padding-top: 168px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main_header">
+      <div style="background: rgb(0 0 0 / 40%); height: 798px">
+        <div class="main">
+          <div class="contract_number">
+            <i class="fa-solid fa-phone fa-2xs" style="color: #ffffff"></i
+            >+1(21) 234 4567
+          </div>
+          <div class="header">
+            <div class="logo">
+              <i
+                class="fa-brands fa-free-code-camp fa-2xl"
+                style="color: #f4b200"
+              ></i
+              ><span>Trip Spot</span>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Stats</a></li>
+                <li><a href="">Testimonials</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="text" style="display: flex">
+            <div class="text_left">
+              <h3>China</h3>
+              <div class="text_left_from">
+                <i class="fa-solid fa-shekel-sign fa-l"></i>
+                <h1>from</h1>
+              </div>
+              <div class="text_left_dollar">
+                <i
+                  class="fa-solid fa-dollar-sign fa-xl"
+                  style="color: #f4b200; font-size: 31px"
+                ></i>
+                <h1>1000</h1>
+              </div>
+            </div>
+            <div class="text_right">
+              <div class="text_search">
+                <ul>
+                  <li><a>Search our Tours</a></li>
+                </ul>
+                <div class="input_right">
+                  <input type="text" placeholder="Search Location" />
+                  <input type="text" placeholder="Price range" />
+                </div>
+                <div class="button_right">
+                  <button>Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="some_content">
+      <div class="some_content_header">
+        <div class="some_content_left">
+          <h4>Winter Wonders and Delicious Detours</h4>
+          <p>
+            Donec malesuada ex sit amet pretium sid ornare. Nulla congue
+            scelerisque tellus, utpretium nulla malesuada sedint. Suspendisse
+            venenatis,Lorem ipsum dolor sit magna dolor.
+          </p>
+          <button>Read More</button>
+        </div>
+        <div class="some_content_right">
+          <img src="./image/ab1.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="services_main">
+      <div class="services_heading">
+        <div class="service_name">
+          <h4>Our services</h4>
+        </div>
+        <div class="services">
+          <div class="services_icon">
+            <h6><i class="fa-solid fa-square-h"></i></h6>
+            <h1>Best hotels</h1>
+            <p>
+              Perspiciatis unde omnis iste natus doloret ipsum volupte ut
+              accusal ntium dolor remque laudantium, totam dolor.
+            </p>
+          </div>
+          <div class="services_icon">
+            <h6><i class="fa-brands fa-glide"></i></h6>
+            <h1>Tourist guide</h1>
+            <p>
+              Perspiciatis unde omnis iste natus doloret ipsum volupte ut
+              accusal ntium dolor remque laudantium, totam dolor.
+            </p>
+          </div>
+          <div class="services_icon">
+            <h6><i class="fa-solid fa-jet-fighter"></i></h6>
+            <h1>Flight tickets</h1>
+            <p>
+              Perspiciatis unde omnis iste natus doloret ipsum volupte ut
+              accusal ntium dolor remque laudantium, totam dolor.
+            </p>
+          </div>
+        </div>
+        <div class="tour">
+          <div class="tour_left">
+            <div class="tour_left_s1">
+              <div
+                style="width: 100%; height: 100%; background: rgb(0 0 0 / 40%)"
+              >
+                <h4>Canada Tours</h4>
+              </div>
+            </div>
+          </div>
+          <div class="tour_right">
+            <div class="tour_right_img1">
+              <div class="tour_right_s2">
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(0 0 0 / 40%);
+                  "
+                >
+                  <h4>Asia Tours</h4>
+                </div>
+              </div>
+            </div>
+            <div class="tour_right_img2">
+              <div class="tour_right_europe">
+                <div class="tour-right_s3">
+                  <div
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      background: rgb(0 0 0 / 40%);
+                    "
+                  >
+                    <h4>Europe Tours</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="tour_right_canada">
+                <div class="tour_right_s4">
+                  <div
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      background: rgb(0 0 0 / 40%);
+                    "
+                  >
+                    <h4>Canada Tours</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class=""
+      style="
+        width: 100%;
+        height: 400px;
+        background-image: url(./image/stats1.jpg);
+        background-repeat: no-repeat;
+        background-position: revert;
+      "
+    >
+      <div
+        class=""
+        style="
+          padding-left: 14%;
+          padding-right: 14%;
+          display: flex;
+          justify-content: space-between;
+          background: rgba(0, 0, 0, 0.4);
+          height: 400px;
+          border: 1px solid;
+        "
+      >
+        <div class="" style="width: 49%; height: 300px">
+          <h1
+            style="
+              color: white;
+              text-transform: uppercase;
+              font-size: 45px;
+              padding-top: 65px;
+            "
+          >
+            Years in the field
+          </h1>
+          <p style="color: white; font-size: 20px; padding-top: 15px">
+            Integer pulvinar leo id viverra feugiat. Pellentesque libero justo,
+            semper at tempus vel, ultrices in ligula. Nulla sollicit sed
+          </p>
+          <div
+            class=""
+            style="display: flex; padding-top: 17px; align-items: baseline"
+          >
+            <h1 style="color: #f4b20094; font-size: 40px">15+</h1>
+            <p style="font-size: 25px; color: white; padding-left: 9px">
+              Years of Experience
+            </p>
+          </div>
+        </div>
+        <div
+          class=""
+          style="
+            width: 49%;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 75px;
+          "
+        >
+          <div class="" style="width: 32%; height: 300px">
+            <p
+              style="
+                text-align: center;
+                font-size: 20px;
+                color: #ccc;
+                padding-top: 3px;
+                text-transform: capitalize;
+              "
+            >
+              Travel joy
+            </p>
+            <h1
+              style="
+                text-align: center;
+                padding-top: 10px;
+                color: white;
+                font-size: 40px;
+              "
+            >
+              12k
+            </h1>
+            <!-- #f4b20094 -->
+            <div
+              class=" "
+              style="
+                width: 65px;
+                height: 65px;
+                margin-top: 10px;
+                margin-left: 50px;
+                border-radius: 37px;
+                background-color: #f4b20094;
+              "
+            >
+              <i
+                class="fa-solid fa-users fa-xl"
+                style="color: #ffffff; padding-left: 18px; padding-top: 32px"
+              >
+              </i>
+            </div>
+          </div>
+          <div class="" style="width: 32%; height: 300px">
+            <p
+              style="
+                text-align: center;
+                font-size: 20px;
+                color: #ccc;
+                padding-top: 3px;
+                text-transform: capitalize;
+              "
+            >
+              world tours
+            </p>
+            <h1
+              style="
+                text-align: center;
+                padding-top: 10px;
+                color: white;
+                font-size: 40px;
+              "
+            >
+              15k
+            </h1>
+            <div
+              class=" "
+              style="
+                width: 65px;
+                height: 65px;
+                margin-top: 10px;
+                margin-left: 50px;
+                border-radius: 37px;
+                background-color: #f4b20094;
+              "
+            >
+              <i
+                class="fa-solid fa-bars-progress fa-xl"
+                style="color: #ffffff; padding-left: 21px; padding-top: 32px"
+              ></i>
+            </div>
+          </div>
+          <div class="" style="width: 32%; height: 300px">
+            <p
+              style="
+                text-align: center;
+                font-size: 20px;
+                color: #ccc;
+                padding-top: 3px;
+                text-transform: capitalize;
+              "
+            >
+              Travel joy
+            </p>
+            <h1
+              style="
+                text-align: center;
+                padding-top: 10px;
+                color: white;
+                font-size: 40px;
+              "
+            >
+              25k
+            </h1>
+            <div
+              class=" "
+              style="
+                width: 65px;
+                height: 65px;
+                margin-top: 10px;
+                margin-left: 50px;
+                border-radius: 37px;
+                background-color: #f4b20094;
+              "
+            >
+              <i
+                class="fa-regular fa-file fa-xl"
+                style="color: #ffffff; padding-left: 25px; padding-top: 32px"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="" style="width: 100%; height: 730px; background: #ebedef">
+      <div class="" style="padding-left: 14%; padding-right: 14%">
+        <div class="" style="display: flex; justify-content: center">
+          <h1
+            style="
+              padding-top: 90px;
+              text-transform: uppercase;
+              font-size: 48px;
+              color: #323648;">Our Guides
+          </h1>
+        </div>
+        <div class="" style=" width: 100%; height: 410px; margin-top: 57px; display: flex; justify-content: space-between;">
+            <div class="" style="width: 23%; height: 410px;display: flex;
+            flex-direction: column;">
+                <img src="./image/t1.jpg" alt="" style="width: 100%; height: 330px;" />
+                <!-- #011144 -->
+                <div class="" style="background-color: #011144;width: 100%; height: 80px;">
+                    <h4 style="color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    letter-spacing: 2px;">Tyson Amery</h4>
+                    <h6 style="text-align: center;
+                    text-transform: uppercase;
+                    color:#ccc;
+                    letter-spacing: 2px;
+                    padding-top: 7px;">Manager</h6>
+                </div>
+             
+
+            </div>
+            <div class="" style="width: 23%; height: 410px; display: flex;
+            flex-direction: column;">
+                <img src="./image/t2.jpg" alt="" style="width: 100%; height: 330px;" />
+                <div class="" style="background-color: #011144;width: 100%; height: 80px;">
+                    <h4 style="color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    letter-spacing: 2px;">Stas Melnik</h4>
+                    <h6 style="text-align: center;
+                    text-transform: uppercase;
+                    color: #ccc;
+                    letter-spacing: 2px;
+                    padding-top: 7px;">director</h6>
+                </div></div>
+            <div class="" style="width: 23%; height: 410px; display: flex;
+            flex-direction: column;">
+                <img src="./image/t3.jpg" alt="" style="width: 100%; height: 330px;" />
+                <div class="" style="background-color: #011144;width: 100%; height: 80px;">
+                    <h4 style="color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    letter-spacing: 2px;">Lise Laurie</h4>
+                    <h6 style="text-align: center;
+                    text-transform: uppercase;
+                    color:#ccc;
+                    letter-spacing: 2px;
+                    padding-top: 7px;">Instructor</h6>
+                </div></div>
+            <div class="" style="width: 23%; height: 410px; display: flex;
+            flex-direction: column;">
+                <img src="./image/t4.jpg" alt="" style="width: 100%; height: 330px;" />
+                <div class="" style="background-color: #011144;width: 100%; height: 80px;">
+                    <h4 style="color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    letter-spacing: 2px;">Effie Eleanora</h4>
+                    <h6 style="text-align: center;
+                    text-transform: uppercase;
+                    color: #ccc;
+                    letter-spacing: 2px;
+                    padding-top: 7px;">Manager</h6>
+                </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="" style="width: 100%; height: 1300px;">
+        <div class=" " style="padding-left: 14%; padding-right: 14%">
+            <div class="" style="display: flex; justify-content: center;">
+                <h4 style="    padding-top: 90px;
+                text-transform: uppercase;
+                font-size: 48px;
+                color: #323648;">Tour Gallery</h4>
+            </div>
+            <div class="" style="width: 100%; height: 450px; margin-top: 70px; display: flex; justify-content: space-between;">
+                <div class="" style="width: 32%; height: 450px; display: flex; flex-direction: column;">
+                    <img src="./image/g1.jpg" alt="" style="width: 100%; height: 400px;border-radius: 10px 10px 0 0;" />
+                    <div class="" style="width: 100%; height: 50px; background-color: #f4b200; ">
+                        <h4 style="color: white; text-transform: uppercase; text-align: center;
+                        padding-top: 12px;
+                        letter-spacing: 2px;">Honeymoon</h4>
+                    </div>
+                </div>
+                <div class="" style="width: 32%; height: 450px;display: flex; flex-direction: column;">
+                    <img src="./image/g3.jpg" alt="" style="width: 100%; height: 400px;border-radius: 10px 10px 0 0;" />
+                    <div class="" style="width: 100%; height: 50px; background-color: #f4b200; ">
+                        <h4 style="color: white; text-transform: uppercase; text-align: center;
+                        padding-top: 12px;
+                        letter-spacing: 2px;">Holidays</h4>
+                    </div>
+                </div>
+                <div class="" style="width: 32%; height: 450px; display: flex; flex-direction: column;">
+                    <img src="./image/g5.jpg" alt="" style="width: 100%; height: 400px;border-radius: 10px 10px 0 0;" />
+                    <div class="" style="width: 100%; height: 50px; background-color: #f4b200; ">
+                        <h4 style="color: white; text-transform: uppercase; text-align: center;
+                        padding-top: 12px;
+                        letter-spacing: 2px;">Luxury</h4>
+                    </div></div>
+            </div>
+            <div class="" style=" width: 100%; height: 450px; margin-top: 30px; display: flex; justify-content: space-between;">
+                <div class="" style="width: 32%; height: 450px;display: flex; flex-direction: column;">
+                    <img src="./image/g2.jpg" alt="" style="width: 100%; height: 400px;border-radius: 10px 10px 0 0;" />
+                    <div class="" style="width: 100%; height: 50px; background-color: #f4b200; ">
+                        <h4 style="color: white; text-transform: uppercase; text-align: center;
+                        padding-top: 12px;
+                        letter-spacing: 2px;">Family</h4>
+                    </div>
+                </div>
+                <div class="" style="width: 32%; height: 450px;display: flex; flex-direction: column;">
+                    <img src="./image/g4.jpg" alt="" style="width: 100%; height: 400px;border-radius: 10px 10px 0 0;" />
+                    <div class="" style="width: 100%; height: 50px; background-color: #f4b200; ">
+                        <h4 style="color: white; text-transform: uppercase; text-align: center;
+                        padding-top: 12px;
+                        letter-spacing: 2px;">Adventure</h4>
+                    </div></div>
+                <div class="" style="width: 32%; height: 450px; display: flex; flex-direction: column;">
+                    <img src="./image/g6.jpg" alt="" style="width: 100%; height: 400px;border-radius: 10px 10px 0 0;" />
+                    <div class="" style="width: 100%; height: 50px; background-color: #f4b200; ">
+                        <h4 style="color: white; text-transform: uppercase; text-align: center;
+                        padding-top: 12px;
+                        letter-spacing: 2px;">Romantic</h4>
+                    </div></div>
+            </div>
+        </div>
+    </div>
+    <div class="" style="width: 100%; height: 600px; background: #ebedef;">
+        <div class="" style="padding-left: 14%; padding-right: 14%">
+            <div class="" style="display: flex; justify-content: center;">
+                <h4 style="    padding-top: 90px;
+                text-transform: uppercase;
+                font-size: 48px;
+                color: #323648;">Tour Prices</h4>
+            </div>
+            <div class="" style="width: 100%; height: 350px; margin-top: 50px; display: flex; justify-content: space-between;">
+                <div style=" width: 24%; height: 350px;">
+                    <h4 style="text-align: center; text-transform:uppercase ; font-size: 20px; color: rgb(87 78 78); letter-spacing: 4px;">China</h4>
+                    <div style=" background-image: url(./image/p1.jpg); width: 100%;     height: 308px;
+                    margin-top: 16px; display: flex; justify-content: end;    background-position: center;">
+                        <div style="width: 100px; height: 50px; background-color: #f4b200;display: flex;">
+                            <i class="fa-solid fa-dollar-sign fa-xs" style="color: white;font-size: 13px;
+                            padding-top: 33px;
+                            padding-left: 12px;"></i>
+                            <h1 style="color: white;">1000</h1>
+                        </div>
+                    </div>
+                </div>
+                <div style=" width: 24%; height: 350px; border: 1px solid rgb(49, 4, 43);">
+                    <h4 style="text-align: center; text-transform:uppercase ; font-size: 20px; color: rgb(87 78 78); letter-spacing: 4px;">Malaysia</h4>
+                    <div style=" background-image: url(./image/p1.jpg); width: 100%;     height: 308px;
+                    margin-top: 16px; display: flex; justify-content: end;    background-position: center;">
+                        <div style="width: 100px; height: 50px; background-color: #f4b200;display: flex;">
+                            <i class="fa-solid fa-dollar-sign fa-xs" style="color: white;font-size: 13px;
+                            padding-top: 33px;
+                            padding-left: 12px;"></i>
+                            <h1 style="color: white;">1100</h1>
+                        </div>
+                    </div></div>
+                <div style=" width: 24%; height: 350px; border: 1px solid rgb(39, 219, 159);">
+                    <h4 style="text-align: center; text-transform:uppercase ; font-size: 20px; color: rgb(87 78 78); letter-spacing: 4px;">China</h4>
+                    <div style=" background-image: url(./image/p1.jpg); width: 100%;     height: 308px;
+                    margin-top: 16px; display: flex; justify-content: end;    background-position: center;">
+                        <div style="width: 100px; height: 50px; background-color: #f4b200;display: flex;">
+                            <i class="fa-solid fa-dollar-sign fa-xs" style="color: white;font-size: 13px;
+                            padding-top: 33px;
+                            padding-left: 12px;"></i>
+                            <h1 style="color: white;">100</h1>
+                        </div>
+                    </div></div>
+                <div style=" width: 24%; height: 350px; border: 1px solid rgb(171, 66, 10);">
+                    <h4 style="text-align: center; text-transform:uppercase ; font-size: 20px; color: rgb(87 78 78); letter-spacing: 4px;">China</h4>
+                    <div style=" background-image: url(./image/p1.jpg); width: 100%;     height: 308px;
+                    margin-top: 16px; display: flex; justify-content: end;    background-position: center;">
+                        <div style="width: 100px; height: 50px; background-color: #f4b200;display: flex;">
+                            <i class="fa-solid fa-dollar-sign fa-xs" style="color: white;font-size: 13px;
+                            padding-top: 33px;
+                            padding-left: 12px;"></i>
+                            <h1 style="color: white;">1000</h1>
+                        </div>
+                    </div></div>
+
+            </div>
+
+        </div>
+
+    </div>
+  </body>
+</html>
