@@ -1,2 +1,186 @@
 1.)What are the benefits of using CSS?
+=> 1. CSS allows for a clear separation of content (HTML) and presentation (CSS).
+   2. CSS enables consistent styling across an entire website. Design elements like fonts, colors, and spacing
+   3.  Once you define styles in CSS, they can be applied to multiple elements or pages. This saves time and effort, especially on larger websites
+   4.  CSS is instrumental in creating responsive web designs that adapt to different screen sizes and devices.
+   5. CSS encourages modularity by using classes and IDs.
+   6. CSS can be used to define styles specifically for printed pages.
+   7. CSS variables (custom properties) enable the creation of global themes for a website, making it easy to switch between different color schemes or design variations.
+   8. CSS files can be cached by browsers, reducing the need to reload stylesheets for every page view.
+
+2.)What are the disadvantages of CSS?
+=> 1. Browser compatibility (some styles sheet are supported and some are not) 
+   2. CSS can become complex, especially on large and complex websites. 
+   3. With CSS, what works with one browser might not always work with another. 
+   4. The programming language world is complicated for non-developers and beginners.
+   5. There might be cross-browser issues while using CSS.
+   6. There are multiple levels which creates confusion for non-developers and beginners.
+
+3.) What is the difference between CSS2 and CSS3?
+=> 1. Modularity and Selectors:
+      CCS2 :  CSS2 has a relatively limited set of selectors and properties.
+      CCS3 :  CSS3 introduces a wide range of new selectors and modularized features, making it more powerful and flexible. 
+
+    2.Border and Background Properties:
+      CCS2 :  CSS2 has basic properties for setting borders and backgrounds. 
+      CCS3 : CSS3 introduces a comprehensive set of border and background properties, including border-radius,box-shadow, and background-size
+      
+    3. Text Effects:
+      CCS2 : CSS2 provides basic text styling options, such as font-weight, font-style, and text-decoration.
+      CCS3 : CSS3 offers advanced text effects, including text shadows.
+
+    4.Box Model:
+      CCS2 : The box model in CSS2 is relatively simple, with limited control over box sizing and layout.
+      CCS3 : CSS3 introduces the box-sizing property. It also includes the flexible box layout (flexbox) and grid layout systems for complex layout designs.
+
+    5.Transitions and Animations:
+      CCS2 : imited support for transitions and animation
+      CCS3 : CSS3 introduces the transition and animation properties, enabling smooth transitions and animations directly through CSS, reducing the need for JavaScript for these effects.
+
+    6.Transformations:
+      CCS2 : CSS2 does not have built-in transformations like scaling, rotating, or skewing elements.
+      CCS3 : CSS3 includes the transform property, allowing you to apply 2D and 3D transformations to elements
+
+    7.Media Queries: 
+     CCS2 : CSS2 has limited support for media queries
+     CCS3 : CSS3 introduces advanced media queries,
+
+    8.Custom Font:
+     CCS2: CSS2 does not provide a standard way to use custom fonts on web pages.
+     CCS3:  CSS3 introduces the @font-face rule, allowing web developers to use custom fonts in their designs.
+
+4.)Name a few CSS style components
+=> 1.Selectors : element selectors (e.g., p, h1, div), class selectors (e.g., .my-class), ID selectors (e.g., #my-id), and pseudo-class selectors (e.g., :hover, :nth-child()).
+   2.Properties : color (text color), font-size (text size), background-color, border, margin, and padding
+   3.Values : #FF0000 (red), rgba(0, 0, 255, 0.5) (semi-transparent blue), or rgb(255, 255, 0) (yellow).
+   4.Selectors and Combinators : space (descendant) selector, > (child) selector, + (adjacent sibling) selector, and ~ (general sibling) selector.
+   5.Box Model :  width, height, margin, border, padding, and box-sizing 
+   6.Layout : display, position, float, grid, flexbox
+   7.Text Styling : ont-family, font-size, font-weight, line-height, text-align, text-decoration, and text-transform
+   8.Backgrounds : background-color, background-image, background-repeat, background-size, and background-position
+   9.Transitions and Animations
+   10. Pseudo-elements: ::before, ::after, ::first-line, and ::first-letter.
+   11.Media Queries
+
+5.)What do you understand by CSS opacity?
+=> The opacity property sets the opacity level for an element.
+    0 - not visible
+    1 - visible
+    0.5 - 50% transparent,
+    .75 - 75% transparent,
+
+    ex., .container {
+  background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */
+  opacity: 0.7; /* 70% opacity for the entire container */
+}
+
+6.) How can the background color of an element be changed?
+=> 1.Using a Color Keyword:.my-element {
+  background-color: red;
+}
+    2. Hexadecimal Color Codes:background-color: #FF0000; /* Red */
+    3.Using RGB or RGBA Color Values : background-color: rgb(255, 0, 0); /* Red */
+                                     background-color: rgba(0, 0, 255, 0.5); /* Semi-transparent blue */
+    4.Using HSL or HSLA Color Values:background-color: hsl(0, 100%, 50%); /* Red */  
+                                    background-color: hsla(240, 100%, 50%, 0.5); /* Semi-transparent blue */
+    5.Using CSS Color Names: background-color: tomato;
+    6.Using Gradients: background-image: linear-gradient(to bottom, #FF0000, #00FF00);
+
+7.)How can image repetition of the backup be controlled?
+=> repeat (default) , repeat-x , repeat-y, no-repeat, round, space
+  .element {
+  background-image: url('your-image.png');
+  background-repeat: repeat;
+  background-repeat: repeat-x;
+   background-repeat: repeat-y;
+   background-repeat: no-repeat;
+   background-repeat: space;
+   background-repeat: round;
+}
+
+8.)What is the use of the background-position property?
+=> 1.Keywords: left, center, right: Positions the image horizontally. top, center, bottom: Positions the image vertically 
+   2.Length Values: You can use length values (e.g., px, em, rem) to specify exact positions in pixels or other length units. ex.,background-position: 10px 20px;
+   3.Percentage Values:Percentage values can be used to specify positions as a percentage of the element's width or height ex.,background-position: 50% 25%;
+   4.Combining Keywords and Values : ex.,background-position: left 10px bottom 20px;
+
+9.)Which property controls the image scroll in the background?
+=> the element's dimensions is the background-attachment property in CSS.
+   1.scroll (default): This is the default behavior. The background image scrolls along with the content as the user scrolls the web page.
+   2.fixed: When you set background-attachment to fixed, the background image remains fixed in place, relative to the viewport. It does not scroll with the content.
+
+10.)Why should background and color be used as separate properties?
+=> 1.Background Property (background or background-image, background-color, etc.):The background property allows you to set multiple background-related styles for an element in one declaration.ex.,background-image, background-color, background-repeat, background-position, background-size, and background-attachment.
+   2.Color Property :The color property is specifically used to set the text color (foreground color) of an element's content.
+
+11.)How to center block elements using CSS1?
+=>To center block elements horizontally or vertically, you can use the following methods with CSS1:
+   1. Horizontally Centering Block Elements:you can use the text-align property 
+      ex.,<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    text-align: center; /* Center-align the child elements */
+  }
+
+  .centered {
+    display: block; /* Make it a block-level element */
+    /* Additional styling for your centered block element */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="centered">This is centered horizontally.</div>
+  </div>
+</body>
+</html>
+   
+    2.Vertically Centering Block Elements:
+    ex.,<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    /* Additional styles for your container */
+  }
+
+  .centered {
+    display: block; /* Make it a block-level element */
+    margin-top: 50%; /* Adjust this value based on the height of the element */
+    margin-bottom: 50%;
+    /* Additional styling for your centered block element */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="centered">This is centered vertically.</div>
+  </div>
+</body>
+</html>
+
+
+12.)How to maintain the CSS specifications?
+=>1.Use CSS Comments
+  2.Follow a Naming Convention: classes and IDs
+  3.Limit the Use of !important: Avoid using !important
+  4.Regularly Review and Refactor: Periodically review your CSS codebase to identify redundant, unused, or outdated styles. Refactor your stylesheets to remove unnecessary code and improve performance.
+  5.Optimize for Performance: with build tools like Webpack or Gulp
+  6.Version Control:Use version control systems like Git to track changes to your CSS files. This allows you to collaborate with others, revert to previous versions, and manage updates effectively.
+  7.Responsive Design and Testing:Ensure that your CSS styles are responsive and adapt well to various screen sizes and devices.
+  8.Browser Compatibility
+  9.Automated Testing
+  10Collaboration and Communication:you're working with a team, maintain open communication about CSS standards and updates. 
+
+13.)What are the ways to integrate CSS as a web page?
+=>1.Inline CSS
+  2. Internal CSS
+  3.External CSS
+  4.CSS Frameworks and Libraries:CSS frameworks like Bootstrap, Foundation
+   ex., <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  5.CSS Preprocessors:CSS preprocessors like Sass, LESS, and Styles
+
+14.)What is embedded style sheets?
 => 
