@@ -183,4 +183,47 @@
   5.CSS Preprocessors:CSS preprocessors like Sass, LESS, and Styles
 
 14.)What is embedded style sheets?
-=> 
+=> Embedded style sheets, also known as inline style sheets, are a way to define CSS (Cascading Style Sheets) styles directly within the HTML document, rather than in an external CSS file.you include a <style> element within the <head> section of your HTML document.
+
+    Inline Style Attribute:You can also apply styles directly to individual HTML elements using the style attribute. 
+
+15.)What are the external style sheets?
+=> Create a Separate CSS File
+   Link to the External CSS File
+   
+
+17.) What are the advantages and disadvantages of using external style sheets?
+=> Advantage :
+     1. Using them, the styles of multiple documents can be controlled from one file.
+2. Classes can be created for use on multiple HTML element types in many documents.
+3. In complex situations, selector and grouping methods can be used to apply styles.
+
+   disadvantage : 
+    1. In order to import style information for each document, an extra download is needed.
+2. Until the external style sheet is loaded, it may not be possible to render the document.
+3. For small number of style definitions, it is not viable.
+
+18.)What is the meaning of the CSS selector?
+=>CSS selectors are used to "find" (or select) the HTML elements you want to style.
+  1.Element Selector
+  2.Class Selector
+  3.ID Selector
+  4.Universal Selector
+  5.Child Selector
+  6.Attribute Selector
+  7.Pseudo-class Selector
+  8.Pseudo-element Selector
+
+19.)What are the media types allowed by CSS?
+=> CSS allows you to specify different styles for different media types or devices.
+1. All 
+2.Screen
+3.printed
+4.speech
+5.Projection
+6.handheld
+7.Braille
+8.Tactile
+
+20.)What is the rule set?
+=>
