@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.header{
+    background-color: lightskyblue;
+    height: auto;
+}
+.header_ml_mr{
+    margin: 0px 50px;
+    padding: 30px 0px;
+}
+.header_ml_mr h2{
+    text-transform: uppercase;
+}
+
+.header_ml_mr h1{
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+.border{
+    border: 1px solid #33545f;
+    margin-top: 20px;
+    opacity: 0.1;
+}
+.address_details{
+    height: auto;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address{
+    width: 40%;
+    height: auto;
+}
+.address h2{
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.address p{
+    padding-top: 10px;
+    text-transform: capitalize;
+    line-height: 25px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.contact{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.phone i{
+    color: #b31f05;
+    font-size: 25px;
+}
+.phone h6{
+    font-size: 15px;
+    padding-left: 5px;
+    color: #b31f05;
+}
+.email{
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.email i{
+    color: #0c9597;
+    font-size: 25px;
+}
+.email h6{
+    font-size: 15px;
+    padding-left: 5px;
+    color: #0c9597
+}
+.map_icon{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    justify-content: space-around;
+    color: #b31f05;
+}
+.infromation{
+    height: auto;
+    background-color: white;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+}
+
+.information{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+}
+.details_send{
+    width: 49%;
+    padding: 30px;
+}
+.details_send form{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+.details_send input{
+    height: 30px;
+    padding-left: 10px;
+    width: 46%;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+}
+
+.details_send textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+}
+.details_send button{
+    width: 13%;
+    height: 35px;
+    background: #b31f05;
+    border: none;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+    color: white;
+}
+.map_details{
+    width: 49%;
+}
+.map_details .map_wh iframe{
+    width: 100%;
+    height: 450px;
+}
+.icon i{
+    font-size: 30px;
+}
