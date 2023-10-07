@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+.background-image {
+  position: relative;
+}
+
+.background-image img {
+  width: 100%;
+  height: 650px;
+}
+.wid-40 {
+  margin: 0 10%;
+}
+.header {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+}
+.logo {
+  top: 0;
+  font-size: 15px;
+  margin-left: 5%;
+  display: flex;
+}
+.logo-first {
+  padding: 0px 5px;
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #8bb2db;
+}
+.logo-first h1 {
+  text-transform: capitalize;
+}
+
+.logo-last {
+  border: 4px solid #fff;
+  padding: 0px 7px;
+  display: flex;
+  color: #fff;
+  padding-bottom: 5px;
+}
+.menu {
+  width: 60%;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.menu ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.menu ul a:hover {
+color: red;
+text-decoration: dashed;
+}
+
+
+.content {
+  position: absolute;
+  bottom: 65px;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  margin: 0px 18%;
+}
+.content h6 {
+  font-size: 15px;
+  line-height: 52px;
+}
+
+.content h1 {
+  font-size: 53px;
+  font-family: system-ui;
+  letter-spacing: 3px;
+  line-height: 52px;
+}
+.dot-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.dot-line h2 {
+  width: 60px;
+  height: 0;
+  border: 1px solid #cdcdcd;
+  margin: 0 10px;
+}
+.dot-line .dot {
+  height: 6px;
+  width: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  border: 3px solid red;
+}
+
+.content p {
+  font-size: 13px;
+  font-size: 13px;
+  margin: 0px 25%;
+}
+
+.button-red {
+  margin: 40px;
+}
+.button-red button {
+  width: 136px;
+  height: 35px;
+  color: white;
+}
+
+.button-red .red1 {
+  background: red;
+  border: none;
+}
+
+.button-red .red2 {
+  background: transparent;
+  border: #fff;
+  border: 1px solid #fff;
+}
+.pain-image{
+    width: 100%;
+    height: 350px;
+}
+.footer-content{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-25{
+    width: 24%;
+    height: 350px;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: center;
+
+}
+.footer-25 .logo{
+    text-align: center;
+    width: 55px ;
+    height: 55px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dd3d21;
+    
+}
+.footer-25 .logo i{
+    font-size: 25px;
+    color: #dd3d21;
+}
+.footer-25 .logo1{
+    color: #8c8888;
+}
+.footer-25 .heading{
+    text-transform: uppercase;
+    color: #dd3d21;
+    margin-top: 25px;
+}
+.footer-25 .heading1{
+    color: #777473;
+    
+}
+
+.footer-25 .dot-line h1{
+    width: 75px;
+    height: 0;
+    border:  1px solid gray;
+}
+.footer-25 .description p{
+    font-size: 13px;
+    text-align: center;
+}
