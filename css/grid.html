@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .header{
+        .header {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-            row-gap: 20px;
-            column-gap: 30px;
+            gap: 10px;
         }
-        
-        img{
+
+        .header1 {
+            display: grid;
+            grid-template-columns: 1fr 4fr ;
+            gap: 10px;
+
+        }
+
+        .header2 {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 10px;
+
+        }
+
+        .header3 {
+            display: grid;
+            grid-template-columns: 1fr 4fr 2fr;
+            gap: 10px;
+
+        }
+
+        .header4 {
+            display: grid;
+            grid-template-columns: 3fr 5fr;
+            gap: 10px;
+
+        }
+
+
+        img {
             height: 400px;
-            width: 200px;
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
     <div class="header">
-        <img src="https://images.pexels.com/photos/18387512/pexels-photo-18387512/free-photo-of-retro-blonde-girl-with-red-apples.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/18267778/pexels-photo-18267778/free-photo-of-close-up-of-a-mix-of-berries.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/12199790/pexels-photo-12199790.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/10583605/pexels-photo-10583605.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/15793370/pexels-photo-15793370/free-photo-of-woman-posing-with-lighter-in-darkness.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/17967575/pexels-photo-17967575/free-photo-of-train-on-a-platform.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/18286678/pexels-photo-18286678/free-photo-of-whipped-cream-with-strawberries-sprinkled-with-crushed-biscuits-in-glass-cups.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/18252341/pexels-photo-18252341/free-photo-of-roofs-of-buildings-in-city.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/18160461/pexels-photo-18160461/free-photo-of-jovan-vasiljevic-sitting-near-the-venice-canal-and-reading-a-book.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
-        <img src="https://images.pexels.com/photos/18273225/pexels-photo-18273225/free-photo-of-waterfall-on-a-rocky-hill.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        <div class="header1">
+            <img src="https://images.pexels.com/photos/18387512/pexels-photo-18387512/free-photo-of-retro-blonde-girl-with-red-apples.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+            <img src="https://images.pexels.com/photos/18267778/pexels-photo-18267778/free-photo-of-close-up-of-a-mix-of-berries.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+            <img src="https://images.pexels.com/photos/12199790/pexels-photo-12199790.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+        </div>
+        <div class="header2"><img
+                src="https://images.pexels.com/photos/10583605/pexels-photo-10583605.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+            <img src="https://images.pexels.com/photos/15793370/pexels-photo-15793370/free-photo-of-woman-posing-with-lighter-in-darkness.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+        </div>
+        <div class="header3"><img
+                src="https://images.pexels.com/photos/17967575/pexels-photo-17967575/free-photo-of-train-on-a-platform.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+            <img src="https://images.pexels.com/photos/18286678/pexels-photo-18286678/free-photo-of-whipped-cream-with-strawberries-sprinkled-with-crushed-biscuits-in-glass-cups.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+            <img src="https://images.pexels.com/photos/18252341/pexels-photo-18252341/free-photo-of-roofs-of-buildings-in-city.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+        </div>
+        <div class="header4"><img
+                src="https://images.pexels.com/photos/18160461/pexels-photo-18160461/free-photo-of-jovan-vasiljevic-sitting-near-the-venice-canal-and-reading-a-book.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+            <img src="https://images.pexels.com/photos/18273225/pexels-photo-18273225/free-photo-of-waterfall-on-a-rocky-hill.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="">
+        </div>
+        <!-- <div class="1">1</div>
+        <div class="2">2</div>
+        <div class="3">3</div>
+        <div class="4">4</div>
+        <div class="5">5</div>
+        <div class="6">6</div>
+        <div class="7">7</div>
+        <div class="8">8</div>
+        <div class="9">9</div>
+        <div class="10">10</div>
+        <div class="11">11</div>
+        <div class="12">12</div> -->
     </div>
 </body>
+
 </html>
