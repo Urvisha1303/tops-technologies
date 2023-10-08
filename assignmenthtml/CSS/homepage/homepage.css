@@ -6,6 +6,7 @@
 
 .background-image {
   position: relative;
+
 }
 
 .background-image img {
@@ -40,6 +41,7 @@
 }
 .logo-first h1 {
   text-transform: capitalize;
+ 
 }
 
 .logo-last {
@@ -67,7 +69,7 @@
 }
 .menu ul a:hover {
 color: red;
-text-decoration: dashed;
+text-decoration: underline;
 }
 
 
@@ -76,7 +78,7 @@ text-decoration: dashed;
   bottom: 65px;
   width: 50%;
   text-align: center;
-  color: #e2dddd;
+  color: #fff;
   margin: 0px 18%;
 }
 .content h6 {
