@@ -1,0 +1,40 @@
+1.)What are the advantages of Bootstrap?
+=>1.Easy to use
+2.Responsive features:CSS adjusts to phones, tablets, and desktops
+3.Mobile-first approach: In Bootstrap, mobile-first styles are part of the core framework
+4.Browser compatibility: Bootstrap 5 is compatible with all modern browsers 
+
+2.)What is a Bootstrap Container, and how does it work?
+=>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+
+3.)What are the default Bootstrap text settings?
+=>1.Base Font Size
+2.Font Family
+3.Line Height
+4.Font Weight
+5.Text Color
+6.Links
+7.Text Alignment
+8.Text Transform
+9.Text Decoration
+10.Text Breaks
+
+4.)What do you know about the Bootstrap Grid System?
+=>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. 
+Bootstrap's grid system allows up to 12 columns across the page.
+Grid Classes
+    xs (for phones - screens less than 768px wide)
+    sm (for tablets - screens equal to or greater than 768px wide)
+    md (for small laptops - screens equal to or greater than 992px wide)
+    lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+
+5.)What is the difference between Bootstrap 4 and Bootstrap 5
+=>Bootstrap-4 :It has 5 tier (xs, sm, md, lg, xl).It has limited colors.Bootstrap 4 supports both IE 10 and 11.Radio buttons, checkboxes have different look in different OS and browsers. Columns can be positioned relative. 	Bootstrap 4 doesn’t have its own SVG icons, we have to use font-awesome for icons.It does not support Offcanvas Component.
+
+Bootstrap-5: It has 6 tier (xs, sm, md, lg, xl, xxl).Extra colors added with the looks, A card improved color palette. there are various shades available to choose.Bootstrap 5 doesn’t support IE 10 and 11.The look of form elements will not change, on different OS or browser. Columns cannot be positioned relative. Bootstrap 5 have its own SVG icons.It supports Offcanvas Component(that is it is available now).
+
+6.)What is a Button Group, and what is the class for a basic Button Group?
+=>“Button Groups” in Bootstrap is a class of name “btn-group” which is used to create a series of buttons in groups (without spaces) vertically or horizontally.
+
+7.)How can you use Bootstrap to make thumbnails?
+=>

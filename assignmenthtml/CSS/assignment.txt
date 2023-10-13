@@ -226,4 +226,4 @@
 8.Tactile
 
 20.)What is the rule set?
-=>
+=> A table of instructions used by a controlled interface to determine what data is allowable and how the data is handled between interconnected systems.
