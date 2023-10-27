@@ -37,4 +37,16 @@ Bootstrap-5: It has 6 tier (xs, sm, md, lg, xl, xxl).Extra colors added with the
 =>“Button Groups” in Bootstrap is a class of name “btn-group” which is used to create a series of buttons in groups (without spaces) vertically or horizontally.
 
 7.)How can you use Bootstrap to make thumbnails?
-=>
+=>A thumbnail is a small image representation of a larger image
+
+8.)In Bootstrap 4, what is flexbox?
+=> The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+9.)How can one create an alert in Bootstrap
+=> Alerts are created with the .alert class, followed by one of the four contextual classes .alert-success, .alert-info, .alert-warning or .alert-danger
+
+10)What is a bootstrap card and how would you create one?
+=>A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+
+ ex., Add the .card class to a <div> element and inside the <div> element, add another <div> element with the .card-body class to create a basic Bootstrap card. You can add text inside the inner <div> element. This is the most basic card that you can create, and it is a body-only card.
+
