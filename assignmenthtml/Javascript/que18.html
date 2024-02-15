@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            width: 500px;
+            height: auto;
+            border: 1px solid black;
+            padding-left: 30px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .button {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 25%;
+            height: 39px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-weight: bolder;
+            font-size: 21px;
+        }
+
+        .ans {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Maths Operations</h3><br>
+        Enter 1st Number : <input type="number" id="num1"><br><br>
+        Enter 2nd Number : <input type="number" id="num2"><br><br>
+        <div class="button">
+            <div style="width: 300px;">
+                <button onclick="add()">+ </button>
+                <button onclick="sub()">-</button>
+                <button onclick="multi()">*</button>
+                <button onclick="division()">/</button>
+                <button onclick="modul()">%</button>
+            </div>
+            <div class="ans">
+                Answer is : <p id="ans" style="color: blue;"> </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function add(){
+            let a = parseInt(document.getElementById('num1').value)
+            let b = parseInt(document.getElementById('num2').value)
+            let result = a + b
+            document.getElementById('ans').innerText = result;
+        }
+
+        function sub() {
+            let a = parseInt(document.getElementById('num1').value)
+            let b = parseInt(document.getElementById('num2').value)
+            let result = a - b
+            document.getElementById('ans').innerText = result;
+            
+        }
+
+        function multi(){
+            let a = parseInt(document.getElementById('num1').value)
+            let b = parseInt(document.getElementById('num2').value)
+            let result = a * b
+            document.getElementById('ans').innerText = result;
+        }
+
+        function division(){
+            let a = parseInt(document.getElementById('num1').value)
+            let b = parseInt(document.getElementById('num2').value)
+            let result = a / b
+            document.getElementById('ans').innerText = result;
+        }
+
+        function modul(){
+            let a = parseInt(document.getElementById('num1').value)
+            let b = parseInt(document.getElementById('num2').value)
+            let result = a % b
+            document.getElementById('ans').innerText = result;
+        }
+
+        
+    </script>
+</body>
+
+</html>

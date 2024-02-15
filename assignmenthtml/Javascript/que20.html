@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Image Highlight</title>
+<style>
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .image-container img {
+        margin: 10px;
+        max-width: 150px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    
+    .highlighted {
+        border-color: red;
+    }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3" class="highlighted">
+    <img src="image4.jpg" alt="Image 4">
+    <img src="image5.jpg" alt="Image 5">
+</div>
+
+</body>
+</html>

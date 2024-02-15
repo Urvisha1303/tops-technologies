@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Result</title>
+    <script src="marksheet.js"></script>
+    <style>
+        .header {
+            width: 500px;
+            height: 460px;
+            border: 1px solid;
+        }
+
+        h1 {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .content {
+            margin: 0 60px 0 40px;
+        }
+
+        .book {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 13px;
+
+        }
+
+        input {
+            width: 50%;
+        }
+
+        .result {
+            text-align: center;
+            margin-left: 93px;
+        }
+
+        button {
+            padding: 5px 22px;
+            font-size: 16px;
+            width: 35%;
+        }
+
+        .total1 {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 20px;
+            width: 100%;
+        }
+
+        .total {
+            width: 100%;
+            display: flex;
+        }
+
+        .obtainmark {
+            width: 100%;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Marksheet for Infromation Technology</h1>
+        <h3>Enter Marks</h3>
+        <div class="content">
+            <div class="marks1 book">
+                <label>1. C Language</label>
+                <input type="number" id="c">
+            </div>
+            <div class="marks2 book">
+                <label>2. C++ Language</label>
+                <input type="number" id="c++">
+            </div>
+            <div class="marks3 book">
+                <label>3. Database</label>
+                <input type="number" id="database">
+            </div>
+            <div class="marks4 book">
+                <label>4. HTML</label>
+                <input type="number" id="html">
+            </div>
+            <div class="marks5 book">
+                <label>5. CSS</label>
+                <input type="number" id="css">
+            </div>
+            <div class="marks6 book">
+                <label>6. php</label>
+                <input type="number" id="php">
+            </div>
+            <div class="marks7 book">
+                <label>7. Core Java</label>
+                <input type="text" id="corejava">
+            </div>
+
+            <div class="result">
+                <button onclick="calculateresult()">Result</button>
+            </div>
+
+            <div class="total1">
+                <div class="total">
+                    <p>Total is : <span id="total" style="color: blue;">/350</span></p>
+                </div>
+                <div class="obtainmark">
+                    <p>Percentage is : <span id="percentage" style="color: blue;">%<span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculateresult(){
+    const marks1 = parseFloat(document.getElementById("c").value)
+    const marks2 = parseFloat(document.getElementById("c++").value)
+    const marks3 = parseFloat(document.getElementById("database").value)
+    const marks4 = parseFloat(document.getElementById("html").value)
+    const marks5 = parseFloat(document.getElementById("css").value)
+    const marks6 = parseFloat(document.getElementById("php").value)
+    const marks7 = parseFloat(document.getElementById("corejava").value)
+
+    const total = marks1 + marks2 + marks3 +marks4 + marks5 + marks6 + marks7;
+    const percentage = (total / 350 )* 100
+
+    document.getElementById("total").innerText = total + " / 350"
+    document.getElementById("percentage").innerText = percentage.toFixed(0) + "%"
+
+}
+    </script>
+</body>
+
+</html>

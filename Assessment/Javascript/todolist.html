@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            border: 1px solid;
+            background-color: rgb(17, 19, 41);
+        }
+
+
+        .databox {
+            margin-top: 25px;
+
+        }
+
+        .databox input {
+            width: 270px;
+            height: 45px;
+            border: 1px solid;
+            border-radius: 6px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .databox button {
+            width: 100px;
+            height: 48px;
+            border: 1px solid;
+            font-size: 15px;
+            border-radius: 7px;
+            background-color: #FFC107;
+            color: #272727cc;
+            font-weight: 800;
+        }
+
+        #boxvalue {
+            width: 385px;
+            height: 187px;
+            border: 1px solid white;
+            margin-top: 20px;
+            border-radius: 6px;
+            background-color: white;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+        tr {
+            height: 45px
+        }
+
+        th {
+            border-bottom: 1px solid #ddd;
+            color: #676464;
+            text-align: left;
+            font-size: 25px;
+            padding-left: 20px;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <div class="box">
+            <div class="databox">
+                <input type="text" id="data" placeholder="Add New">
+                <button onclick="AddData()">Add</button>
+            </div>
+            <div id="boxvalue">
+                <table id="table">
+                    <!-- <tr>
+                        <th>Read a Book</th>
+                    </tr>
+                    <tr>
+                        <th>Lunch with caro</th>
+                    </tr>
+                    <tr>
+                        <th>Feed the dog</th>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        let todo = []
+        const AddData = () => {
+            let add = document.getElementById('data').value
+            console.log("ADD", add)
+            todo.push(add)
+            document.getElementById('data').value = ''
+            // console.log(todo)
+            displaydata(todo)
+
+        }
+
+        const displaydata = (todo) => {
+            document.getElementById('table').innerHTML = ''
+            console.log("TODO", todo)
+            todo.forEach((value, index) => {
+                let tr = document.createElement('tr')
+                let th = document.createElement('th')
+               
+                console.log("VALUE", value)
+                th.innerText = value
+                tr.append(th);
+                console.log(document.getElementsByTagName('table'))
+                document.getElementById('table').append(tr)
+               
+
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+1. What is JavaScript?
+=> Javascript is a scripting language.
+   Javascript is a client side, interpreted, Object Oriented, hight level scripting language. 
+
+
+2. What is the use of isNaN function?
+=> isNaN : Not a Number.The isNaN function returns true if the provided value is NaN and false if it is a valid number or can be converted to one.
+   ex.,let num = 42;
+let result = isNaN(num);
+console.log(result); // Output: false
+
+    ex.,let text = "Hello";
+let result = isNaN(text);
+
+console.log(result); // Output: true
+
+
+3. What is negative Infinity?
+=>In JavaScript, negative Infinity is a special value representing negative infinity. The Number.NEGATIVE_INFINITY property is used to represent negative infinity in JavaScript.
+  ex., let negativeInfinity = Number.NEGATIVE_INFINITY;
+      console.log(negativeInfinity);  // Output: -Infinity
+
+4. Which company developed JavaScript?
+=>JavaScript was created at Netscape Communications by Brendan Eich in 1995.Netscape and Eich designed JavaScript as a scripting language for use with the company's flagship web browser, Netscape Navigator.  it was originally called "Mocha" during development, then briefly "LiveScript," before finally being named JavaScript.
+
+5. What are undeclared and undefined variables?
+=>Undeclared Variables:An undeclared variable is a variable that has been used in code without being declared using the var, let, or const keyword.
+ex.,myVariable = 10;
+console.log(myVariable);  // Output: 10
+
+Undefined Variables:An undefined variable is a variable that has been declared but has not been assigned a value.
+ex.,let myVariable;
+console.log(myVariable);  // Output: undefined
+
+6. Write the code for adding new elements dynamically?
+=> let data= document.createElement('div')
+
+
+7. What is the difference between ViewState and SessionState?
+=>  i)ViewState: ViewState is specific to a page in a session.
+ii)SessionState: SessionState is specific to user-specific data that can be accessed across all web application pages.
+
+8. What is === operator?
+=> if the two values beign compare same type or same value it's return true
+   if the two values diffrenct type or diffrenct value it's return false
+
+9. How can the style/class of an element be changed?
+=>   <tr id="tableRow">
+    <script>
+    let ele = document.getElementById('tableRow')
+    ele.style.backgroundColor = 'purple';
+</script>
+
+
+10.How to read and write a file using JavaScript?
+=> There are two ways to read and write a file using JavaScript
+
+    i) Using JavaScript extensions
+   ii)  Using a web page and Active X objects
+
+
+11.What are all the looping structures in JavaScript?
+=>for loop: 
+         for (initialization; condition; increment/decrement) {
+               // code to be executed
+         }
+
+while loop:
+       while (condition) {
+             // code to be executed
+        }
+
+do...while loop:do {
+    // code to be executed
+} while (condition);
+
+for...in loop:for (variable in object) {
+    // code to be executed
+}
+
+for...of loop:for (variable of iterable) {
+    // code to be executed
+}
+
+forEach loop (Array method):array.forEach(function(element) {
+    // code to be executed
+});
+
+
+12.How can you convert the string of any base to an integer in JavaScript?
+=>parseInt() method
+
+13.What is the function of the delete operator?
+=>i) Removing Object Properties: let obj = { a: 1, b: 2, c: 3 };
+console.log(obj);
+delete obj.b;
+console.log(obj);
+
+    ii)Removing Array Elements:let arr = [1, 2, 3, 4];
+console.log(arr);
+delete arr[2];
+console.log(arr);
+
+    iii)splice():let arr = [1, 2, 3, 4];
+arr.splice(2, 1); // Remove one element at index 2
+console.log(arr); // Output: [1, 2, 4]
+
+
+13.What are all the types of Pop up boxes available in JavaScript?
+=>  i)Alert Box:alert("This is an alert message!");
+   ii)Prompt Box:let userInput = prompt("Please enter your name:");
+   iii)Confirm Box:let userResponse = confirm("Are you sure you want to delete this item?");
+
+14.What is the use of Void (0)?
+=>Void(0) is used to prevent the page from refreshing, and parameter “zero” is passed while calling.
+Void(0) is used to call another method without refreshing the page.
+
+
+15.How can a page be forced to load another page in JavaScript?
+=>1.Using window.location.href:window.location.href = "https://example.com/newpage.html";
+ 2.Using window.location.assign():window.location.assign("https://example.com/newpage.html");
+ 3.Using window.location.replace():window.location.replace("https://example.com/newpage.html");
+
+ 16.What are the disadvantages of using innerHTML in JavaScript?
+ => i) Content is replaced everywhere
+    ii) We cannot use it like “appending to innerHTML
+    iii)Even if you use +=like “innerHTML = innerHTML + ‘html'” still the old content is replaced by html
+    iv) The entire innerHTML content is re-parsed and builds into elements. Therefore, it’s much slower
+    V)The innerHTML does not provide validation, and therefore we can potentially insert valid and broken HTML in the document and break it
+
+
+17.Create password field with show hide functionalities 
+=> Show Answer : que17.html
+
+18.Create basic math operation in JS
+=> Show Answer : que18.html
+
+19. Create result 
+=>Show Answer : que19.html
