@@ -1,0 +1,141 @@
+****Advance JavaScript for Front-End
+Introduction and Code Quality******
+
+
+1.Write a program to Show an alert
+=>  <button onclick="clickAlert()">Show Alert</button>
+    <script>
+const clickAlert = () =>{
+    alert('This is an Alret!')
+}
+    </script>
+
+2.What will be the result for these expressions?
+=> 1] 5 > 4 => true
+   2] "apple" > "pineapple" =>  false
+   3]  "2" > "12"  => true
+   4] undefined == null  => true
+   5] undefined === null  => false
+   6] null == "\n0\n"   => false
+   7] null === +"\n0\n"  => false
+
+3.Will alert be shown?
+=>if ("0") {
+    alert('Hello'); // output yes, alert will be show
+}
+
+4.What is the code below going to output? alert( null || 2 || undefined );
+=>alert( null || 2 || undefined );// ouput will be show '2'
+
+5.The following function returns true if the parameter age is greater than 18 Otherwise it asks for a confirmation and returns its result:
+=>let age = prompt("enter your age: ")
+checkAge(age);
+   function checkAge(age) {
+    
+    if (age > 18) {
+        return true;
+    } else {
+        return confirm('Did parents allow you?');
+    }
+}
+
+6.Replace Function Expressions with arrow functions in the code below:
+=>
+let ask = (question, yes, no) =>{
+    if(confirm(question)){
+        yes()
+    }else{
+        no()
+    }
+};
+
+ask = ('Do you agree?', 
+    ()=>{alert("you agreed.");},
+    ()=>{alert("You canceled the execution.");}
+    )
+
+
+****Data Types and Objects***
+
+
+1.Write the code, one line for each action
+=> 1]Create an empty object user.
+  => let user = {}
+
+  2]Add the property name with the value John.
+  => user.name = 'John';
+
+  3]Add the property surname with the value Smith.
+  => user.surname = 'Smith';
+  
+  4.]Change the value of the name to Pete.
+  =>user.name = 'Pete';
+
+  5.Remove the property name from the object.
+  => delete user.name
+
+2.Is array copied?
+let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
+shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
+alert( fruits.length ); // ?
+=> outpur : 4
+
+3.Map to names
+let john = { name: "John", age: 25 }; let pete = { name: "Pete", age: 30 }; let mary =
+{ name: "Mary", age: 28 }; let users = [ john, pete, mary ]; let names = /* ... your
+code */ alert( names ); // John, Pete, Mary
+ans:
+let john = { name: "John", age: 25 }; 
+let pete = { name: "Pete", age: 30 }; 
+let mary ={ name: "Mary", age: 28 }; 
+let users = [ john, pete, mary ]; 
+
+let names = users.map(users => users.name);
+alert(names)
+
+4.Map to objects
+Ans:
+let john = { name: "John", surname: "Smith", id: 1 }; 
+let pete = { name: "Pete",surname: "Hunt", id: 2 }; 
+let mary = { name: "Mary", surname: "Key", id: 3 }; 
+let users = [ john, pete, mary ]; 
+let usersMapped = users.map(user =>({
+    fullName  : `${user.name} ${user.surname}`,
+    id: user.id
+}))
+alert(usersMapped[0].id)
+alert(usersMapped[0].fullName)
+
+5.Sum the properties There is a salaries object with arbitrary number of salaries. Write
+the function sumSalaries(salaries) that returns the sum of all salaries using
+Object.values and the for..of loop.If salaries is empty, then the result must be 0
+Ans: 
+function sumSalaries(salaries){
+    total = 0
+    for(let sum of Object.values(salaries)){
+        total += sum;
+    }
+    return total;
+}
+let salaries = {
+"John": 100,
+"Pete": 300,
+"Mary": 250
+};
+alert( sumSalaries(salaries) ); 
+
+6.Destructuring assignment We have an object: Write the Destructuring assignment that
+reads:
+  a]Name property into the variable name.
+b]Year’s property into the variable age
+c) isAdmin property into the variable isAdmin (false, if no such property)
+d) let user = { name: "John", years: 30};
+Ans: 
+let person = {name: "John", years: 30}
+const {name, years : age, isAdmin = false} = person
+console.log(name); // john
+console.log(age); // 30
+console.log(years); // 30
+console.log(isAdmin); // false
+
+7.
