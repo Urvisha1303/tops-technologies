@@ -2,7 +2,7 @@
 Introduction and Code Quality******
 
 
-1.Write a program to Show an alert
+1].Write a program to Show an alert
 =>  <button onclick="clickAlert()">Show Alert</button>
     <script>
 const clickAlert = () =>{
@@ -10,7 +10,7 @@ const clickAlert = () =>{
 }
     </script>
 
-2.What will be the result for these expressions?
+2].What will be the result for these expressions?
 => 1] 5 > 4 => true
    2] "apple" > "pineapple" =>  false
    3]  "2" > "12"  => true
@@ -19,15 +19,15 @@ const clickAlert = () =>{
    6] null == "\n0\n"   => false
    7] null === +"\n0\n"  => false
 
-3.Will alert be shown?
+3].Will alert be shown?
 =>if ("0") {
     alert('Hello'); // output yes, alert will be show
 }
 
-4.What is the code below going to output? alert( null || 2 || undefined );
+4].What is the code below going to output? alert( null || 2 || undefined );
 =>alert( null || 2 || undefined );// ouput will be show '2'
 
-5.The following function returns true if the parameter age is greater than 18 Otherwise it asks for a confirmation and returns its result:
+5].The following function returns true if the parameter age is greater than 18 Otherwise it asks for a confirmation and returns its result:
 =>let age = prompt("enter your age: ")
 checkAge(age);
    function checkAge(age) {
@@ -39,7 +39,7 @@ checkAge(age);
     }
 }
 
-6.Replace Function Expressions with arrow functions in the code below:
+6].Replace Function Expressions with arrow functions in the code below:
 =>
 let ask = (question, yes, no) =>{
     if(confirm(question)){
@@ -58,8 +58,8 @@ ask = ('Do you agree?',
 ****Data Types and Objects***
 
 
-1.Write the code, one line for each action
-=> 1]Create an empty object user.
+1].Write the code, one line for each action
+Ans :  1]Create an empty object user.
   => let user = {}
 
   2]Add the property name with the value John.
@@ -74,14 +74,14 @@ ask = ('Do you agree?',
   5.Remove the property name from the object.
   => delete user.name
 
-2.Is array copied?
-let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
+2].Is array copied?
+Ans : let fruits = ["Apples", "Pear", "Orange"]; // push a new value into the "copy" let
 shoppingCart = fruits; shoppingCart.push("Banana"); // what's in fruits?
 alert( fruits.length ); // ?
 => outpur : 4
 
-3.Map to names
-let john = { name: "John", age: 25 }; let pete = { name: "Pete", age: 30 }; let mary =
+3].Map to names
+Ans : let john = { name: "John", age: 25 }; let pete = { name: "Pete", age: 30 }; let mary =
 { name: "Mary", age: 28 }; let users = [ john, pete, mary ]; let names = /* ... your
 code */ alert( names ); // John, Pete, Mary
 ans:
@@ -93,7 +93,7 @@ let users = [ john, pete, mary ];
 let names = users.map(users => users.name);
 alert(names)
 
-4.Map to objects
+4].Map to objects
 Ans:
 let john = { name: "John", surname: "Smith", id: 1 }; 
 let pete = { name: "Pete",surname: "Hunt", id: 2 }; 
@@ -106,7 +106,7 @@ let usersMapped = users.map(user =>({
 alert(usersMapped[0].id)
 alert(usersMapped[0].fullName)
 
-5.Sum the properties There is a salaries object with arbitrary number of salaries. Write
+5].Sum the properties There is a salaries object with arbitrary number of salaries. Write
 the function sumSalaries(salaries) that returns the sum of all salaries using
 Object.values and the for..of loop.If salaries is empty, then the result must be 0
 Ans: 
@@ -124,7 +124,7 @@ let salaries = {
 };
 alert( sumSalaries(salaries) ); 
 
-6.Destructuring assignment We have an object: Write the Destructuring assignment that
+6].Destructuring assignment We have an object: Write the Destructuring assignment that
 reads:
   a]Name property into the variable name.
 b]Year’s property into the variable age
@@ -138,4 +138,123 @@ console.log(age); // 30
 console.log(years); // 30
 console.log(isAdmin); // false
 
-7.
+7].Turn the object into JSON and back Turn the user into JSON and then read it back
+into another variable.
+user = { name: "John Smith", age: 35};
+
+Ans:
+    user = { name: "John Smith", age: 35};
+const userObj = JSON.stringify(user);
+console.log(userObj);
+const userFromParse = JSON.parse(userObj);
+console.log(userFromParse);
+
+
+*******Document, Event and Controls***************
+
+
+1].Create a program to hide/show the password
+Ans:  hideShowPasswordCreate.html : file created
+
+
+2].Create a program that will select all the classes and loop over and whenever i click the
+button the alert should show
+Ans : alertcreate.html : file Create
+
+
+3]. Create a responsive header using proper JavaScript
+Ans:  responsiveheader.html : file Create
+
+4].Create a form and validate using JavaScript
+Ans:  validatonFrom.html  : file Create
+
+5].Create a modal box using css and Js with three buttons
+Ans:     modalbox.html     : file Create
+
+6].Use external js library to show slider
+Ans:     slidershow.html   : file Create
+
+
+7].Prevent the browser when i click the form submit button
+Ans:     preventbtn.html   : file created
+
+
+
+*************New Request*****************
+
+1].What is JSON
+Ans: JSON means javascript Object notation.JSON Mostly use when data is sent from sever to client.
+     JSON is an Easier-to-use alternative to XML
+     JSON Two Method
+       i) parse()  : change to JSON to object
+       ii)stringify()  : change to object to JSON
+ 
+
+ 2].What is promises
+ Ans: promise callback function has two parameters which are the Resolve, Reject
+     promise Key Word:
+     i) Pending: the Result undefined
+     ii) Resolve : The Result(resolve) is a Value[fulfilled]
+     iii) Reject : the Result is an error(reject) Object.
+
+     syntax: let promise = new promise((resolve, reject)=>{
+        resolve('success')
+  reject('failure')
+     })
+
+    => Promise.prototype.then() and Promise.prototype.catch() methods return promises, they can be chained.
+
+
+3].Write a program of promises and handle that promises also
+Ans:    promise.html     : file Create
+
+4].Use fetch method for calling an api https://fakestoreapi.com/products
+5].Display all the product from the api in your HTML page
+Ans:   both ans this file     featchapi.html :    file Create  
+
+
+
+
+*********************JavaScript Essentials*****************
+
+1].Calculate subtotal price of quantity in JavaScript?
+Ans:  pricequantity.html   : file Create
+
+
+
+2].What is JavaScript Output method?
+Ans: console.log("Hello World!")
+    alert("confrim!")
+    document.Write('Hello Wolrd!')
+    document.getElementById('myElement').innerHTML = 'New content here.';
+    document.getElementById('myElement').innerText = 'New text content here.';
+    document.getElementById('myElement').textContent = 'New text content here.';
+
+
+3].How to used JavaScript Output method?
+Ans: console.log()
+     alert()
+     document.Write()
+     innerHTML
+     innerText
+     textContent
+
+4].How to used JavaScript Events to do all examples?
+Ans: i) Click Event:
+document.getElementById("myButton").addEventListener("click", function() {
+        alert("Button clicked!");}
+
+    ii)Mouseover Event: document.getElementById("myDiv").addEventListener("mouseover", function() {
+        this.style.backgroundColor = "red";
+    })
+
+    iii) Keydown Event: document.getElementById("myInput").addEventListener("keydown", function(event) {
+        console.log("Key pressed: " + event.key);
+    });
+
+    iv) Submit Event: document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents the default form submission
+        console.log("Form submitted");
+
+    v) Load Event: window.addEventListener("load", function() {
+        console.log("Page loaded");

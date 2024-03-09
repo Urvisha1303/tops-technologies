@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.google.com/" id="anchore">Click Me</a><br>
+    <input type="text" placeholder="Username">
+    <input type="password" name="Password" id="" placeholder="Enter Password">
+    <button onclick="submitbtn(event)">Submit</button>
+
+    <script>
+        let anchor =document.getElementById('anchore')
+        anchore.addEventListener('click', (event)=>{
+            // console.log(event);
+            // event.preventDefault();
+
+        })
+
+        function submitbtn(event){
+            event.preventDefault()  /// any work you run stop that's way use preventdafualt() event use 
+            console.log('submitted.');
+        }
+    </script>
+
+    <!-- without PreventDefualt event run programming but add preventdefualte event stop run programming -->
+</body>
+
+</html>

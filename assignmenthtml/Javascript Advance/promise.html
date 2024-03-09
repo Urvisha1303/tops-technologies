@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="featchskill()">Featch Skill</button>
+        <div id="output"></div>
+    </div>
+    <script>
+        const  featchskill = () =>{
+            let outputfeatch = document.getElementById('output')
+            outputfeatch.innerHTML = 'Featching Data.....'
+            // console.log(outputfeatch);
+
+            const featchpromise = new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    resolve('Data Featch Successfully...')
+
+                }, 3000)
+            })
+
+            featchpromise.then((result)=>{
+                outputfeatch.innerHTML = result;
+            }).catch((error)=>{
+                outputfeatch.innerHTML = 'Error featching Data'
+                console.log('Error', error);
+            })
+        }
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product_list" id="product_list">
+
+
+    </div>
+    <script>
+        fetch('https://fakestoreapi.com/products')
+            .then((result) => {
+                console.log(result);
+                return result.json()
+            }).then((result) => {
+                // console.log(result);
+                let product_list = document.getElementById('product_list')
+                // console.log(product_list);
+
+                result.map((product) => {
+                    const box = document.createElement('div')
+                    box.classList.add('box')
+
+                    const id = document.createElement('h5')
+                    id.textContent = `Id: ${product.id}`
+                    box.append(id)
+
+                    const title = document.createElement("h6")
+                    title.textContent = product.title
+                    box.append(title)
+
+                    const image = document.createElement('img')
+                    image.src = product.image
+                    image.alt = product.title
+                    box.append(image)
+
+                    const decription = document.createElement('p')
+                    decription.textContent = `Decription : ${product.description}`
+                    box.append(decription)
+
+                    const label = document.createElement('label')
+                    label.textContent = `Price : ${product.price}`
+                    box.append(label)
+
+
+
+                    product_list.appendChild(box)
+                })
+
+
+                return result
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    </script>
+</body>
+
+</html>

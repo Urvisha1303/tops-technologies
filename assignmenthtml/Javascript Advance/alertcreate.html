@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alert on Button Click</title>
+</head>
+<body>
+
+    <!-- <button onclick="">Click Me!</button> -->
+<div class="alertable">Element 1</div>
+<div class="alertable">Element 2</div>
+<div class="alertable">Element 3</div>
+<div class="alertable">Element 4</div>
+
+<script>
+ let button = document.createElement('button')
+ button.textContent= 'Click Me!'
+ document.body.appendChild(button)
+ 
+ button.addEventListener('click', ()=>{
+    let alerts = document.querySelectorAll('.alertable')
+    alerts.forEach(function(ele){
+        alert("Alert From : " + ele.textContent)
+    })
+ })
+ console.log(button);
+</script>
+
+</body>
+</html>

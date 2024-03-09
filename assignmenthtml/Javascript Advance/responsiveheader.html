@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: auto;
+            height: auto;
+            background: #132b9ba3;
+        }
+
+        .header {
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            background-color: rgb(43, 75, 135);
+            position: relative;
+        }
+
+        .logo {
+            color: #fff;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .menu_icon {
+            display: none;
+        }
+
+        .menu_icon i {
+            color: #fff;
+            font-size: 30px;
+
+        }
+
+        @media (max-width : 600px) {
+            ul {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 70px;
+                flex-direction: column;
+                text-align: center;
+                background-color: rgb(43, 75, 135);
+                gap: 0;
+                overflow: hidden;
+            }
+            ul li{
+                padding: 10px;
+            }
+            .menu_icon{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <ul id="menuList">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="menu_icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </div>
+
+    <script>
+        let menuList = document.getElementById('menuList')
+        menuList.style.maxHeight = '0px'
+        function toggleMenu(){
+            if(menuList.style.maxHeight == '0px'){
+                menuList.style.maxHeight = '300px'
+            }else{
+                menuList.style.maxHeight = '0px'
+            }
+        }
+    </script>
+</body>
+
+</html>

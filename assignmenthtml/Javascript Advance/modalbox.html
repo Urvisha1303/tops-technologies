@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: lightgray;
+        }
+        #OpenModalbtn {
+            width: 10%;
+            height: 37px;
+            border: 1px solid #70686845;
+        }
+
+        #mymodal {
+            background: #70686845;
+            border: 1px solid #70686845;
+            margin: auto;
+            width: 28%;
+            padding-bottom: 25px;
+            padding-left: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        h2,
+        p {
+            text-align: left;
+        }
+
+        #cancelbtn,
+        #confirmbtn {
+            margin-right: 10px;
+            width: 23%;
+            height: 25px;
+            border: none
+        }
+    </style>
+</head>
+
+<body>
+    <button id="OpenModalbtn">Open Modal</button>
+    <div id="mymodal">
+        <h2>Modal Box</h2>
+        <p>This is Modal Box. Click cancel or Confirm</p>
+        <button id="cancelbtn">Cancel</button>
+        <button id="confirmbtn">Confirm</button>
+    </div>
+
+    <script>
+        document.getElementById('OpenModalbtn').addEventListener('click', function () {
+            document.getElementById('mymodal').style.display = 'block';
+        })
+
+        document.getElementById('cancelbtn').addEventListener('click', () => {
+            document.getElementById('mymodal').style.display = 'none';
+        })
+
+        document.getElementById('confirmbtn').addEventListener('click', () => {
+            alert('Confirmed!')
+            document.getElementById('mymodal').style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>

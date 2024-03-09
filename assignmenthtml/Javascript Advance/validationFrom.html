@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .registerform {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            border: 1px solid black;
+            margin: auto;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            width: 70%;
+
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 96%;
+            background-color: #b0a3a36b;
+            border: none;
+            height: 25px;
+            /* padding-left: 10px; */
+            outline: none;
+        }
+
+        .error {
+            color: red;
+
+
+        }
+
+        button {
+            width: 100%;
+            height: 35px;
+            background-color: #4367b0;
+            font-size: 15px;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            margin-top: 25px;
+
+        }
+
+        .signin {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registerform">
+        <h1>Registration Form</h1>
+        <p>Kindly Fill in This form in Register</p>
+        <form action="" id="registractionform">
+            <label for="">Username</label><br>
+            <input type="text" id="userName" placeholder="Enter UserName">
+            <span id="usererror" class="error"></span><br><br>
+
+            <label for="">Email</label><br>
+            <input type="email" placeholder="Enter Email" name="" id="email">
+            <span id="emailerror" class="error"></span><br><br>
+
+            <label for="">Password</label><br>
+            <input type="password" name="" id="password" placeholder="Enter Password">
+            <span id="passworderror" class="error"></span><br><br>
+
+            <label for="">Repeat Password</label><br>
+            <input type="password" name="" id="repeatpassword" placeholder="Repeat Password">
+            <span id="repeatpassworderror" class="error"></span><br><br>
+
+            <button type="button" onclick="validationform()">Register</button>
+            <div class="signin">
+                <p>Already have an account? <a href="#">Sign in</a></p>
+            </div>
+
+
+        </form>
+    </div>
+    <script>
+        function validationform() {
+            let username = document.getElementById('userName').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let repeatPassword = document.getElementById('repeatpassword').value;
+
+            let usererror = document.getElementById('usererror')
+            let emailerror = document.getElementById('emailerror')
+            let passworderror = document.getElementById('passworderror')
+            let repeatpassworderror = document.getElementById('repeatpassworderror')
+
+
+            if (username === '') {
+                usererror.textContent = 'Username Is Required.'
+                return
+            } else {
+                usererror.textContent = " ";
+
+            }
+
+
+            if (email === ' ') {
+                emailerror.textContent = "Email is required";
+                return
+            } else if (!isValidEmail(email)) {
+                emailerror.textContent = 'Invalid Email Formate.';
+
+            } else {
+                emailerror.textContent = "";
+
+            }
+
+
+
+            if (password === '') {
+                passworderror.textContent = 'Password Is Required';
+                return;
+            } else if (password.length < 6) {
+                passworderror.textContent = "Password Must Be 6 Digit Required"
+                return;
+            } else {
+                passworderror.textContent = ''
+
+            }
+
+            if (repeatPassword === '') {
+                repeatpassworderror.textContent = 'Repeat Password Is Required';
+                return;
+            } else if (password !== repeatPassword) {
+                repeatpassworderror.textContent = 'Password Is Not Same';
+                return;
+            } else {
+                repeatpassworderror.textContent = "";
+
+            }
+
+
+            document.getElementById('registractionform').submit()
+        }
+        function isValidEmail(email) {
+            // Very basic email validation
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+    </script>
+</body>
+
+</html>
