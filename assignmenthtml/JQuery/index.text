@@ -3,5 +3,31 @@ Ans: jQuery is a JavaScript Library.The purpose of jQuery is to make it much eas
 
 2].How to Apply CSS Using JQuery, How to Add Class and Remove Class in
 Jquery, JQuery Animation?
-Ans: i)Applying CSS using jQuery
-     
+Ans: <h1 id="header">Hello World</h1>
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <script>
+        $(document).ready(function () {
+           
+            $("#header").css({
+                "color": 'red',
+                "font-size": "25px"  : css apply
+
+            })
+            $("#header").addClass('highlight') : add Class
+
+             $("#header").removeClass("highlight") : remove class
+            $("#header").click(function () {
+                $(this).animate({
+                    left: '250px',
+                    opacity: "0.5",
+
+                }, 3000) : animattion
+            })
+
+        })
+
+    </script>
+    
+3].How to create slider with animation?
+Ans: 
+           

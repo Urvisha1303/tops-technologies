@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-spacing: 0;
+            border: 1px solid #80808033;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 80%;
+        }
+
+        .product_img {
+            width: 500px;
+            text-align: start;
+            padding: 10px 20px;
+        }
+
+        p {
+            font-size: 25px;
+            text-align: start;
+        }
+
+        #number_input {
+            width: 160px;
+            height: 25px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 21px;
+            margin-bottom: 100px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .remove {
+            margin: 20px;
+            background: #d7702f;
+            width: 120px;
+            height: 44px;
+            font-size: 17px;
+            border: none;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        tr {
+            height: 71px;
+            font-size: 24px;
+
+        }
+
+        th {
+            padding: 0 29px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <table border="1">
+            <tr>
+                <th>Product Infromation</th>
+                <th>Quantity</th>
+                <th>Price(per unit)</th>
+                <th>Price(subtotal)</th>
+                <th></th>
+            </tr>
+            <tbody id="product_list">
+
+            </tbody>
+            <tr>
+                <td> </td>
+                <td></td>
+                <td></td>
+                <td><span id="total_price"></span></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </div>
+    <script>
+        
+        fetch("https://fakestoreapi.com/products")
+            .then((result) => {
+                // console.log(result);
+                return result.json()
+            }).then((result) => {
+                // console.log(result);
+                const productList = document.getElementById("product_list");
+                // console.log(productList);
+                
+                result.map((product) => {
+                    let tr = document.createElement('tr')
+                    console.log(tr);
+
+
+                    let imgcontent = document.createElement('td')
+                    imgcontent.className = 'product_img'
+                    tr.append(imgcontent)
+                    let img = document.createElement('img')
+                    img.src = product.image;
+                    imgcontent.append(img)
+                    let ptag = document.createElement('p')
+                    ptag.textContent = product.title
+                    imgcontent.append(ptag)
+
+                    let inputcontent = document.createElement('td')
+                    tr.append(inputcontent)
+                    let input = document.createElement('input')
+                    input.id = 'number_input'
+                    input.type = 'number'
+                    inputcontent.append(input)
+
+                    let unitprice = document.createElement('td')
+                    unitprice.textContent = `${product.price}`
+                    tr.append(unitprice)
+
+                    let totalprice = document.createElement('td')
+                    tr.append(totalprice)
+
+                    let buttontd = document.createElement('td')
+                    tr.append(buttontd)
+                    let removebtn = document.createElement('button')
+                    removebtn.textContent = "Remove";
+                    removebtn.className = 'remove';
+                    buttontd.append(removebtn)
+
+
+                    input.addEventListener('input', ()=>{
+                        const quantity = parseInt(input.value) || 0;
+                        const subTotal = quantity * product.price;
+                        totalprice.textContent = subTotal.toFixed(2);
+                        updateTotalPrice()
+                        
+                    })
+
+                    removebtn.addEventListener('click', ()=>{
+                        tr.remove();
+                        updateTotalPrice();
+                       
+                    })
+                    productList.appendChild(tr)
+
+                   
+                });
+                  const updateTotalPrice = () =>{
+                    let totalPrice = 0;
+                    let rows = document.querySelectorAll('#product_list tr')
+                    for(let i=0; i < rows.length; i++){
+                        let row = rows[i]
+                        let subtotal = parseFloat(row.cells[3].textContent) || 0;
+                        totalPrice += subtotal
+
+
+                    }
+                    document.getElementById('total_price').textContent = totalPrice.toFixed(2)
+
+                  }
+
+                
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+</html>
