@@ -4,47 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>jQuery Slideshow</title>
     <style>
-        .highlight {
-            background-color: yellowgreen;
+        #slideshow {
+            margin: 0 auto;
+            position: relative;
+        }
+        #slideshow img{
+            width: 100%;
+    height: 730px;
         }
 
-        #header {
-            position: relative;
-           
+      .slide {
+            /* display: none; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
         }
+
+          .slideshow-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffffff00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            /* border: 1px solid; */
+        }
+        .slideshow-btn i{
+            /* color: black; */
+    font-size: 25px;
+        }
+
+        #next-btn {
+
+            position: absolute;
+            top: 350px;
+            right:8px;
+        }
+
+        #prev-btn {
+            position: absolute;
+            top:350px;
+            left:8px;
+        } 
     </style>
 </head>
 
 <body>
-    <h1 id="header">Hello World</h1>
-    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+    <div id="slideshow">
+        <img class="slide" src="image1.jpeg" alt="Slide 1">
+        <img class="slide" src="image2.jpeg" alt="Slide 2">
+        <img class="slide" src="image3.jpeg" alt="Slide 3">
+    </div>
+    <button id="prev-btn" class="slideshow-btn"><i class="fa-solid fa-less-than"></i></button>
+    <button id="next-btn" class="slideshow-btn"><i class="fa-solid fa-greater-than"></i></button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-           
-            $("#header").css({
-                "color": 'red',
-                "font-size": "25px"
+       $(document).ready(function(){
+        let currentIndex = 0;
+        let slides = $(".slide")
+    
 
-            })
-            // $("#header").addClass('highlight')
+        $('.slideshow-btn').hover(
+       function(){ $(this).css({
+                backgroundColor: "#00000040"
+            }) },
+       function(){ $(this).css({
+                backgroundColor: ""
+            }) }
+)
+    
+        slides.hide().eq(currentIndex).show()
 
-            // $("#header").removeClass("highlight")
-            $("#header").click(function () {
-                $(this).animate({
-                    left: '250px',
-                    opacity: "0.5",
-
-                }, 3000)
-            })
+        $('#next-btn').click(function(){
+            slides.eq(currentIndex).hide()
+            currentIndex = (currentIndex + 1)% slides.length;
+            slides.eq(currentIndex).show()
 
         })
 
+        $('#prev-btn').click(function(){
+            slides.eq(currentIndex).hide();
+            currentIndex = (currentIndex -1 + slides.length) % slides.length;
+            slides.eq(currentIndex).show();
+ 
+        })
+
+        
+         setInterval(() => {
+            slides.eq(currentIndex).fadeIn(2000)
+            currentIndex = (currentIndex + 1)% slides.length;
+            slides.eq(currentIndex).fadeOut(2000)
+         }, 2000);
+
+       })
     </script>
+    
+
 </body>
 
 </html>

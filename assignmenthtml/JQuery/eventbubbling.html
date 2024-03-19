@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body * {
+            border: 1px solid;
+            margin: 50px;
+            padding: 5px;
+            display: block;
+            border: 2px solid lightgrey;
+
+
+        }
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("span").parents().css({ "color": "red", "border": "2px solid red" });
+
+    })
+
+</script>
+
+<body>body (great- great-grandparent)
+    <div id="container">div (gread -grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct Parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

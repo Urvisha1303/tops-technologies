@@ -29,5 +29,9 @@ Ans: <h1 id="header">Hello World</h1>
     </script>
     
 3].How to create slider with animation?
-Ans: 
+Ans:  jquery.html : Create File
            
+
+
+4].Event bubbling tickling example
+Ans:  eventbubbling.html : create File
