@@ -1,0 +1,42 @@
+.box{
+    width: 270px;
+    height: 300px;
+    border: 1px solid black ;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    flex-direction:column ;
+
+}
+
+.input{
+    margin-bottom: 13px;
+    background-color: #8080804f;
+    border: none;
+    border-radius: 15px;
+    padding-left: 25px;
+    height: 35px;
+    width: 235px;
+}
+
+
+.loginbtn{
+    margin-right: 10px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgb(40, 40, 223);
+}
+
+.signupbtn{
+    background-color: rgb(40, 40, 223);
+    border: none;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+form{
+    margin: 25px;
+}
