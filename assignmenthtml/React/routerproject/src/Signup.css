@@ -1,0 +1,47 @@
+.box1{
+    width: 270px;
+    height: 350px;
+    border: 1px solid #5f38a3f7;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    flex-direction:column ;
+    background-color: #211d48;
+
+}
+.sign{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.input1{
+    margin-bottom: 13px;
+    background-color:#fff;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    height: 35px;
+    width: 235px;
+}
+
+
+.loginbtn1{
+    border: none;
+    background-color: #5f38a3f7;
+    width: 200px;
+    margin: 14px 17px;
+    height: 40px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+   
+}
+
+form{
+    margin: 25px;
+}
