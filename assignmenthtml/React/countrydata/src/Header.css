@@ -1,0 +1,19 @@
+.box{
+    width: 350px;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.img{
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    margin: auto;
+}
+.name{
+    margin: auto;
+}
+.details{
+    text-align: left;
+}
