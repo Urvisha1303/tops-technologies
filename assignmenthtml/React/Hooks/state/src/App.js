@@ -9,6 +9,7 @@ import Reducer_hook from './usereducer/Reducer_hook';
 import Layouteffect_hook from './uselayouteffect/Layouteffect_hook';
 import Memo_hook from './usememo/Memo_hook';
 import Callback_hook from './usecallback/Callback_hook';
+import Forwardref_hook from './forwardref/Forwardref_hook';
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
         <div className="App">
           {/* <State_hooks/> */}
           {/* <Effect_hook/> */}
-          <Reference_hook/>
+          {/* <Reference_hook/> */}
           {/* <Reducer_hook/> */}
           {/* <Layouteffect_hook/> */}
           {/* <Memo_hook/> */}
           {/* <Callback_hook/> */}
+          <Forwardref_hook/>
       {/* <Header /> */}
     </div>
     // </Context_hook>
