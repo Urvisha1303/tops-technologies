@@ -1,0 +1,21 @@
+1.What is Redux..?
+=> Redux is a library for javascript applications.you can use redux together with react or with any other view library. redux is a state container.
+=>Redux is a tool that helps manage and organize the state (data) of your application in one central place, making it easier to keep track of changes and debug your code.
+
+2.What is Redux Thunk used for?
+=>The primary purpose of Redux-Thunk is to handle asynchronous actions in Redux.. Asynchronous actions, such as fetching data from an API or performing asynchronous computations, are common in web applications.
+
+3.What is Pure Component? When to use Pure Component over Component?
+=>A Pure Component in React is a special type of component that only updates when its data changes. This helps make your app run faster by avoiding unnecessary updates.is called pure component.
+=> 1.Your component's data doesn't change often.
+   2.You want to prevent re-renders if the data is the same.
+   3.Your data is simple and not deeply nested.
+
+
+4.What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+=>The second argument that can optionally be passed to setState is a callback function. This callback function is executed after the state has been updated and the component has re-rendered.
+Purpose of the Callback: The callback is useful when you need to perform some action immediately after the state change has been applied and the component has re-rendered. This ensures that the action occurs with the updated state.
+
+5.Create a Table and Search data from table using React Js
+=> 
