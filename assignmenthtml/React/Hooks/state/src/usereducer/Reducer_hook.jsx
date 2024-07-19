@@ -7,7 +7,7 @@ const reducer = (state, action) => {
 
 const Reducer_hook = () => {
   // const [number, setNumber] = useState(0)
-
+// 
   const [state, dispatch] = useReducer(reducer, initialstate);
 
   const increment = () => {

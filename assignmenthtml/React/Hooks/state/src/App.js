@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-// import State_hooks from './usestate/State_hooks';
-// import Effect_hook from './useeffect/Effect_hook';
+import State_hooks from './usestate/State_hooks';
+import Effect_hook from './useeffect/Effect_hook';
 import Context_hook from './usecontext/Context_hook';
 import Header from './usecontext/Header';
 import Reference_hook from './useref/Reference_hook';
@@ -13,7 +13,7 @@ import Forwardref_hook from './forwardref/Forwardref_hook';
 
 function App() {
   return (
-    // <Context_hook>
+    <Context_hook>
 
         <div className="App">
           {/* <State_hooks/> */}
@@ -23,10 +23,10 @@ function App() {
           {/* <Layouteffect_hook/> */}
           {/* <Memo_hook/> */}
           {/* <Callback_hook/> */}
-          <Forwardref_hook/>
-      {/* <Header /> */}
+          {/* <Forwardref_hook/> */}
+      <Header />
     </div>
-    // </Context_hook>
+     </Context_hook>
   );
 }
 
