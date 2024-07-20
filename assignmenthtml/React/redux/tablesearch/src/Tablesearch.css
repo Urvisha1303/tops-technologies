@@ -1,0 +1,76 @@
+*{
+    font-family: sans-serif;
+}
+
+.box{
+    /* border: 1px solid gray; */
+    /* width: 98%; */
+    /* height: 300px; */
+    padding: 5px 15px ;
+}
+.search-createbtn{
+     display: flex;
+     justify-content: space-between;
+}
+.searchbar{
+    font-size: 14px;
+    padding: 10px 0px;
+}
+
+.searchbar input{
+    width: 250px;
+    height: 50px;
+    height: 31px;
+}
+
+.searchbar button{
+    height: 31px;
+    width: 70px;
+}
+.createProduct{
+    background-color: rgb(22 93 148 / 70%);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    padding: 10px 19px;
+    margin: 1px 50px;
+    border-radius: 4px;
+}
+.table{
+    border: 1px solid #808080a8;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.table tr, th,td{
+    border: 1px solid #808080a8;
+    height: 25px;
+    width: 25%;
+    text-align: start;
+    padding-left: 10px;
+    
+}
+
+.action{
+    padding-left: 10px;
+    text-align: center;
+    
+}
+
+.btn .readbtn,.editbtn ,.deletebtn{
+    margin-right: 10px;
+    background-color: #1d6ccaf0;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.btn .editbtn{
+    background-color: #0f93afb5;
+}
+.btn .deletebtn{
+    background-color: #bb0202;;
+}
