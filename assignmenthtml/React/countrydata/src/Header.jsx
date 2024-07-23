@@ -3,7 +3,7 @@ import "./Header.css";
 import CountryDeatils from "./CountryDeatils";
 
 const Header = () => {
-  // const getData = ()=>
+  // const getData = () =>
 
   const [data, setData] = useState(null);
   const [random, setRandom] = useState(0);

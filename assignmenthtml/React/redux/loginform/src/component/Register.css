@@ -1,0 +1,32 @@
+.box{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 15%;
+    height: 260px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 0 15px;
+}
+.box label{
+    margin-top: 10px;
+    
+}
+
+.box input{
+    width: 90%;
+}
+.regibtn{
+    margin-top: 10px;
+}
+
+.btn button{
+    margin-right: 10px;
+
+}
+
+.linkbtn{
+    color: black;
+    text-decoration: none;
+
+}
